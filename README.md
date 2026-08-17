@@ -38,7 +38,11 @@ Introduces established and evolving methodologies for the analysis, design, and 
 
 ## About Me
 
-William Beckham — U.S. Army veteran (82nd Airborne, Field Artillery; Army Reserve Civil Affairs). Holds an AAS in Systems Security & Analysis from FTCC and is now pursuing a second AAS in Computer Programming & Development. Working toward a federal cybersecurity career.
+I'm a U.S. Army combat veteran — 82nd Airborne, 13B Field Artillery, two deployments to Afghanistan — who later served in the Army Reserve as 38B Civil Affairs at USACAPOC, Fort Bragg. After leaving service, I returned to school at FTCC and completed an AAS in Systems Security & Analysis in May 2026 (4.0 GPA, Highest Honors). I'm now working on a second AAS in Computer Programming & Development, expected May 2027.
+
+Recent technical work includes building a local AI/ML infrastructure (Ollama + AnythingLLM, 8+ specialized models) as a data-sovereignty solution relevant to federal cybersecurity work, and an independent multi-optimizer OCR ensemble research project (PyTorch, five optimizers, hundreds of thousands of training samples) that grew out of coursework into ongoing personal research. I've also completed hands-on security coursework including HackTheBox modules and a National Cyber League team competition.
+
+My goal is a federal cybersecurity career at Fort Bragg. This repo is part of that broader effort — building a demonstrable, public record of applied systems and security work alongside my coursework.
 
 ## Status
 
