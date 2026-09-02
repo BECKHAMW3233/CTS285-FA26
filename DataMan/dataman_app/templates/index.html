@@ -1,0 +1,609 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DataMan</title>
+<style>
+  /* Hard target: fit comfortably inside ~1000x560 CSS pixels, well below
+     a 1920x1080 screen -- real browser chrome (tabs/address bar), the
+     Windows taskbar, and common display-scaling settings (125%/150% on
+     a 1920x1080 monitor renders as an effective viewport far smaller
+     than 1920x1080 in CSS pixels) all eat into the nominal screen
+     resolution before the page ever gets a pixel of it. Designing to
+     the raw 1920x1080 figure was the bug -- this leaves a large margin
+     under it instead of touching the edge of it. */
+  * { box-sizing: border-box; }
+  body { font-family: monospace; max-width: 1000px; margin: 0.6em auto; padding: 0 0.8em; font-size: 14px; }
+  h1 { font-family: sans-serif; margin: 0 0 0.15em 0; font-size: 1.25em; }
+  h2 { font-family: sans-serif; margin: 0 0 0.35em 0; font-size: 0.95em; }
+  #display {
+    display: inline-block; min-width: 10ch; padding: 0.2em 0.4em;
+    background: #113311; color: #7CFC7C; font-size: 1.05em; letter-spacing: 0.1em;
+  }
+  .activity-tabs { display: flex; flex-wrap: wrap; gap: 0.3em; margin: 0.4em 0; font-family: sans-serif; }
+  .activity-tabs button {
+    padding: 0.3em 0.6em; border-radius: 6px; border: 1px solid #999;
+    background: #eee; color: #222; cursor: pointer; font-size: 0.78em;
+  }
+  .activity-tabs button.active-tab { background: #d97a1f; color: #fff; border-color: #874; }
+  .top-row { display: flex; gap: 0.8em; align-items: flex-start; flex-wrap: wrap; }
+  .left-col { flex: 0 0 auto; }
+  .middle-col {
+    flex: 1 1 400px; min-width: 260px; max-width: 620px;
+    border: 1px solid #ccc; border-radius: 6px; padding: 0.55em;
+    max-height: 230px; overflow-y: auto;
+  }
+  .output-row { margin-top: 0.6em; }
+  #keypad { display: inline-grid; grid-template-columns: repeat(4, 2.6em); gap: 4px; margin: 0.3em 0; }
+  #keypad button {
+    background: #d97a1f; color: #200; border: 1px solid #874;
+    border-radius: 5px; font-family: sans-serif; font-size: 0.8em; cursor: pointer;
+    height: 1.9em;
+  }
+  #keypad button[data-kind="activity"] { background: #b3540f; color: #fff; }
+  #keypad button[data-kind="power"] { background: #444; color: #fff; }
+  #keypad button[data-kind="control"] { background: #6a6a6a; color: #fff; }
+  section.panel { display: none; }
+  section.panel.active { display: block; }
+  section.panel h2 { margin-top: 0; }
+  section.panel p { margin: 0.35em 0; }
+  input[type=text] { width: 3.2em; font-size: 0.95em; }
+  #log {
+    background: #f4f4f4; border: 1px solid #ccc; border-radius: 6px;
+    padding: 0.55em; white-space: pre-wrap; word-break: break-word;
+    font-size: 0.82em; min-height: 110px; max-height: 190px; overflow-y: auto; margin: 0;
+  }
+</style>
+</head>
+<body>
+
+<h1>DataMan</h1>
+<p style="margin: 0.2em 0;">Display: <span id="display">off</span></p>
+
+<nav class="activity-tabs">
+  <button data-panel="answer_checker" onclick="navTo('answer_checker')">Answer Checker</button>
+  <button data-panel="memory_bank" onclick="navTo('memory_bank')">Memory Bank</button>
+  <button data-panel="electro_flash" onclick="navTo('electro_flash')">Electro Flash</button>
+  <button data-panel="number_guesser" onclick="navTo('number_guesser')">Number Guesser</button>
+  <button data-panel="wipe_out" onclick="navTo('wipe_out')">Wipe Out</button>
+  <button data-panel="force_out" onclick="navTo('force_out')">Force Out</button>
+  <button data-panel="missing_number" onclick="navTo('missing_number')">Missing Number</button>
+</nav>
+
+<div class="top-row">
+  <div class="left-col">
+    <div id="keypad"></div>
+  </div>
+  <div class="middle-col">
+
+<section id="panel-answer_checker" class="panel active">
+  <h2>Answer Checker</h2>
+  <p>
+    a: <input class="kp-target" id="ac_a" size="3"> op:
+    <input class="kp-target" id="ac_op" size="2" readonly>
+    b: <input class="kp-target" id="ac_b" size="3">
+    <button onclick="acProblem()">Enter Problem</button>
+  </p>
+  <p>
+    answer: <input class="kp-target" id="ac_ans" size="4">
+    <button onclick="acAnswer()">Submit Answer</button>
+  </p>
+  <p id="ac_score"></p>
+</section>
+
+<section id="panel-memory_bank" class="panel">
+  <h2>Memory Bank</h2>
+  <p>
+    a: <input class="kp-target" id="mb_a" size="3"> op:
+    <input class="kp-target" id="mb_op" size="2" readonly>
+    b: <input class="kp-target" id="mb_b" size="3">
+    <button onclick="mbStore()">Store Problem (⊜)</button>
+    <button onclick="post('/api/memory-bank/clear').then(showJson)">Clear</button>
+  </p>
+  <p><span id="mb_count"></span></p>
+  <button onclick="mbGo()">GO</button>
+  <p>
+    answer: <input class="kp-target" id="mb_ans" size="4">
+    <button onclick="mbAnswer()">Submit Answer</button>
+  </p>
+  <p id="mb_score"></p>
+</section>
+
+<section id="panel-electro_flash" class="panel">
+  <h2>Electro Flash</h2>
+  <p>
+    digit: <input class="kp-target" id="ef_digit" size="2"> op:
+    <input class="kp-target" id="ef_op" size="2" readonly>
+  </p>
+  <p>
+    <button onclick="efSelect('digit')">Select (digit key pressed first)</button>
+    <button onclick="efSelect('op')">Select (operator key pressed first)</button>
+  </p>
+  <button onclick="efGo()">GO</button>
+  <p>
+    answer: <input class="kp-target" id="ef_ans" size="4">
+    <button onclick="efAnswer()">Submit Answer</button>
+  </p>
+  <p id="ef_score"></p>
+</section>
+
+<section id="panel-number_guesser" class="panel">
+  <h2>Number Guesser</h2>
+  <p><button onclick="ngNew()">New Secret Number (???)</button></p>
+  <p>
+    guess: <input class="kp-target" id="ng_guess" size="4">
+    <button onclick="ngGuess()">Guess</button>
+  </p>
+  <p id="ng_status"></p>
+</section>
+
+<section id="panel-wipe_out" class="panel">
+  <h2>Wipe Out</h2>
+  <p>
+    players (comma-separated):
+    <input class="kp-target" id="wo_players" size="30" value="Player 1, Player 2">
+    <button onclick="woSelect()">Select Players (✳)</button>
+  </p>
+  <button onclick="woGo()">GO</button>
+  <button onclick="woPass()">Pass to next player</button>
+  <p>
+    answer: <input class="kp-target" id="wo_ans" size="4">
+    <button onclick="woAnswer()">Submit Answer</button>
+  </p>
+  <p id="wo_status"></p>
+</section>
+
+<section id="panel-force_out" class="panel">
+  <h2>Force Out</h2>
+  <p>
+    players (comma-separated):
+    <input class="kp-target" id="fo_players" size="30" value="Player 1, Player 2">
+    <button onclick="foSelect()">Select Players & Start (↗)</button>
+  </p>
+  <p>
+    amount (1-9): <input class="kp-target" id="fo_amount" size="2">
+    <button onclick="foSubtract()">Subtract</button>
+  </p>
+  <p id="fo_status"></p>
+</section>
+
+<section id="panel-missing_number" class="panel">
+  <h2>Missing Number ("Box") Problems</h2>
+  <p>
+    box: <span id="mn_box">(press [?] on the keypad)</span>
+    op: <input class="kp-target" id="mn_op" size="2" readonly>
+  </p>
+  <p>
+    <button onclick="mnLevel(1)">Level 1 (basic)</button>
+    <button onclick="mnLevel(2)">Level 2 (harder)</button>
+  </p>
+  <button onclick="mnGo()">GO</button>
+  <p>
+    answer: <input class="kp-target" id="mn_ans" size="4">
+    <button onclick="mnAnswer()">Submit Answer</button>
+  </p>
+  <p id="mn_score"></p>
+</section>
+
+  </div>
+</div>
+
+<div class="output-row">
+  <h2>Output</h2>
+  <pre id="log">(press ON to begin)</pre>
+</div>
+
+<script>
+// ---------------------------------------------------------------------
+// Debug logging -- developer-only, never shown in this page. Every API
+// call is already logged server-side (app.py's before/after_request
+// hooks write every request and response to dataman.log). This just
+// reports the things that never reach the server on their own -- raw
+// keypad presses, panel navigation, uncaught JS errors -- to
+// /api/client-log, which appends them to that same file. Fire-and-forget:
+// logging must never be able to break the app.
+// ---------------------------------------------------------------------
+
+function logDebug(kind, message, isError) {
+  try {
+    fetch("/api/client-log", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({level: isError ? "error" : "info", message: `${kind}: ${message}`}),
+      keepalive: true,
+    }).catch(() => {});
+  } catch (e) {
+    // best-effort only
+  }
+}
+
+window.addEventListener("error", (e) => {
+  logDebug("js-error", `${e.message} (${e.filename}:${e.lineno})`, true);
+});
+window.addEventListener("unhandledrejection", (e) => {
+  const reason = e.reason && e.reason.message ? e.reason.message : String(e.reason);
+  logDebug("js-error", `unhandled promise rejection: ${reason}`, true);
+});
+
+let currentPanel = "answer_checker";
+let lastFocusedInput = null;
+
+document.addEventListener("focusin", (e) => {
+  if (e.target.classList && e.target.classList.contains("kp-target")) {
+    lastFocusedInput = e.target;
+  }
+});
+
+function showPanel(name) {
+  document.querySelectorAll("section.panel").forEach(s => s.classList.remove("active"));
+  const el = document.getElementById("panel-" + name);
+  if (el) el.classList.add("active");
+  currentPanel = name;
+  document.querySelectorAll(".activity-tabs button").forEach(b =>
+    b.classList.toggle("active-tab", b.dataset.panel === name));
+}
+
+// Labeled-tab navigation: pure "show me this panel", separate from the
+// keypad's activity keys (which both select the panel AND immediately
+// act, e.g. Number Guesser picking a secret) -- all 7 activities are
+// implemented and reachable here, not just Answer Checker.
+function navTo(name) {
+  logDebug("nav", `switched to ${name} panel`);
+  showPanel(name);
+}
+
+async function post(url, body) {
+  // Every request/response here is already captured server-side (see
+  // app.py's before/after_request hooks) -- no client-side logging
+  // needed on top of that.
+  const opts = {method: "POST", headers: {"Content-Type": "application/json"}};
+  if (body !== undefined) opts.body = JSON.stringify(body);
+  const res = await fetch(url, opts);
+  return res.json();
+}
+
+function showJson(data) {
+  document.getElementById("log").textContent = JSON.stringify(data, null, 2);
+  if (data.display !== undefined) document.getElementById("display").textContent = data.display;
+  return data;
+}
+
+// ---------------------------------------------------------------------
+// Keypad: rendered from /api/keypad -- symbol-only activity keys, same
+// as the real unlabeled game keys on the physical device.
+// ---------------------------------------------------------------------
+
+const ACTIVITY_PANEL = {
+  electro_flash: "electro_flash",
+  missing_number: "missing_number",
+  wipe_out: "wipe_out",
+  number_guesser: "number_guesser",
+  force_out: "force_out",
+  memory_bank: "memory_bank",
+};
+
+async function loadKeypad() {
+  try {
+    const res = await fetch("/api/keypad");
+    const data = await res.json();
+    const grid = document.getElementById("keypad");
+    grid.innerHTML = "";
+    data.rows.forEach(row => {
+      row.forEach(key => {
+        const btn = document.createElement("button");
+        btn.textContent = key.symbol;
+        btn.dataset.kind = key.kind;
+        btn.title = key.key;
+        btn.onclick = () => handleKeypadPress(key);
+        grid.appendChild(btn);
+      });
+    });
+    logDebug("init", `keypad loaded (${data.rows.flat().length} keys)`);
+  } catch (e) {
+    logDebug("init-error", `failed to load /api/keypad -- ${e.message}`, true);
+  }
+}
+
+function insertIntoFocused(value, replace) {
+  if (!lastFocusedInput) {
+    logDebug("keypress-warning", `key "${value}" pressed but no input field is focused -- ignored`, true);
+    return;
+  }
+  if (replace) {
+    lastFocusedInput.value = String(value);
+  } else {
+    lastFocusedInput.value = (lastFocusedInput.value || "") + String(value);
+  }
+}
+
+function handleKeypadPress(key) {
+  logDebug("keypress", `${key.kind}: ${key.key}` + (key.value !== undefined ? ` (${key.value})` : ""));
+  switch (key.kind) {
+    case "digit":
+      insertIntoFocused(key.value, false);
+      return;
+    case "op":
+      insertIntoFocused(key.value, true);
+      return;
+    case "power":
+      if (key.key === "on") turnOn(); else turnOff();
+      return;
+    case "control":
+      if (key.key === "go") dispatchGo();
+      if (key.key === "equals") dispatchEquals();
+      return;
+    case "activity":
+      dispatchActivityKey(key.key);
+      return;
+  }
+}
+
+function dispatchActivityKey(key) {
+  if (key === "missing_number") {
+    // Every press of [?] cycles the box, including the first press
+    // (which also switches DataMan into Missing Number mode).
+    showPanel("missing_number");
+    mnCycleBox();
+    return;
+  }
+  if (key === "number_guesser") {
+    showPanel("number_guesser");
+    ngNew();
+    return;
+  }
+  if (key === "memory_bank") {
+    // Store whatever problem is currently entered: prefer the visible
+    // panel's own a/op/b fields if it's shaped like one (Answer Checker
+    // or Memory Bank), matching "put in the problem... then press the
+    // Memory Bank key."
+    if (currentPanel === "memory_bank") {
+      mbStore();
+    } else {
+      storeFromAnswerChecker();
+    }
+    showPanel("memory_bank");
+    return;
+  }
+  showPanel(ACTIVITY_PANEL[key]);
+}
+
+const GO_HANDLERS = {
+  memory_bank: mbGo,
+  electro_flash: efGo,
+  wipe_out: woGo,
+  missing_number: mnGo,
+};
+function dispatchGo() {
+  const handler = GO_HANDLERS[currentPanel];
+  if (handler) handler();
+}
+
+const EQUALS_HANDLERS = {
+  answer_checker: acAnswer,
+  memory_bank: mbAnswer,
+  electro_flash: efAnswer,
+  missing_number: mnAnswer,
+  wipe_out: woAnswer,
+  number_guesser: ngGuess,
+  force_out: foSubtract,
+};
+function dispatchEquals() {
+  const handler = EQUALS_HANDLERS[currentPanel];
+  if (handler) handler();
+}
+
+// ---------------------------------------------------------------------
+// Power
+// ---------------------------------------------------------------------
+
+function turnOn() {
+  post("/api/on").then(d => { showJson(d); showPanel("answer_checker"); });
+}
+function turnOff() {
+  post("/api/off").then(d => { showJson(d); document.getElementById("display").textContent = "off"; });
+}
+
+// ---------------------------------------------------------------------
+// Answer Checker
+// ---------------------------------------------------------------------
+
+function acProblem() {
+  const a = parseInt(document.getElementById("ac_a").value);
+  const b = parseInt(document.getElementById("ac_b").value);
+  const op = document.getElementById("ac_op").value;
+  post("/api/answer-checker/problem", {op, a, b}).then(showJson);
+}
+
+function acAnswer() {
+  const answer = parseInt(document.getElementById("ac_ans").value);
+  post("/api/answer-checker/answer", {answer}).then(d => {
+    showJson(d);
+    if (d.score) document.getElementById("ac_score").textContent =
+      `Score: ${d.score.right}/${d.score.tried}`;
+  });
+}
+
+function storeFromAnswerChecker() {
+  const a = parseInt(document.getElementById("ac_a").value);
+  const b = parseInt(document.getElementById("ac_b").value);
+  const op = document.getElementById("ac_op").value;
+  post("/api/memory-bank/store", {op, a, b}).then(d => {
+    showJson(d);
+    if (d.stored !== undefined) document.getElementById("mb_count").textContent =
+      `Stored: ${d.stored}/${d.max}`;
+  });
+}
+
+// ---------------------------------------------------------------------
+// Memory Bank
+// ---------------------------------------------------------------------
+
+function mbStore() {
+  const a = parseInt(document.getElementById("mb_a").value);
+  const b = parseInt(document.getElementById("mb_b").value);
+  const op = document.getElementById("mb_op").value;
+  post("/api/memory-bank/store", {op, a, b}).then(d => {
+    showJson(d);
+    if (d.stored !== undefined) document.getElementById("mb_count").textContent =
+      `Stored: ${d.stored}/${d.max}`;
+  });
+}
+
+function mbGo() {
+  post("/api/memory-bank/go").then(showJson);
+}
+
+function mbAnswer() {
+  const answer = parseInt(document.getElementById("mb_ans").value);
+  post("/api/memory-bank/answer", {answer}).then(d => {
+    showJson(d);
+    if (d.score) document.getElementById("mb_score").textContent =
+      `Score: ${d.score.right}/${d.score.tried}/${d.score.ticks}`;
+  });
+}
+
+// ---------------------------------------------------------------------
+// Electro Flash
+// ---------------------------------------------------------------------
+
+function efSelect(first) {
+  const digit = parseInt(document.getElementById("ef_digit").value);
+  const op = document.getElementById("ef_op").value;
+  post("/api/electro-flash/select", {first, digit, op}).then(showJson);
+}
+
+function efGo() {
+  post("/api/electro-flash/go").then(showJson);
+}
+
+function efAnswer() {
+  const answer = parseInt(document.getElementById("ef_ans").value);
+  post("/api/electro-flash/answer", {answer}).then(d => {
+    showJson(d);
+    if (d.score) document.getElementById("ef_score").textContent =
+      `Table score: ${d.score.right}/${d.score.tried}/${d.score.ticks}`;
+  });
+}
+
+// ---------------------------------------------------------------------
+// Number Guesser
+// ---------------------------------------------------------------------
+
+function ngNew() {
+  post("/api/number-guesser/new").then(d => {
+    showJson(d);
+    document.getElementById("ng_status").textContent =
+      `Secret is between ${d.lower} and ${d.upper}. Guesses: ${d.guesses}`;
+  });
+}
+
+function ngGuess() {
+  const guess = parseInt(document.getElementById("ng_guess").value);
+  post("/api/number-guesser/guess", {guess}).then(d => {
+    showJson(d);
+    if (d.correct) {
+      document.getElementById("ng_status").textContent =
+        `Correct! It took ${d.guesses} guesses.`;
+    } else if (d.lower !== undefined) {
+      document.getElementById("ng_status").textContent =
+        `Between ${d.lower} and ${d.upper}. Guesses: ${d.guesses}`;
+    }
+  });
+}
+
+// ---------------------------------------------------------------------
+// Wipe Out
+// ---------------------------------------------------------------------
+
+function woSelect() {
+  const players = document.getElementById("wo_players").value.split(",").map(s => s.trim()).filter(Boolean);
+  post("/api/wipe-out/select", {players}).then(showJson);
+}
+
+function woGo() {
+  post("/api/wipe-out/go").then(d => {
+    showJson(d);
+    document.getElementById("wo_status").textContent = `${d.active_player}'s turn.`;
+  });
+}
+
+function woAnswer() {
+  const answer = parseInt(document.getElementById("wo_ans").value);
+  post("/api/wipe-out/answer", {answer}).then(d => {
+    showJson(d);
+    if (d.wipe_out) {
+      document.getElementById("wo_status").textContent = d.game_over
+        ? `WIPE OUT! ${d.eliminated} is out. Winner: ${d.winner}`
+        : `WIPE OUT! ${d.eliminated} is out. Next: ${d.active_player}`;
+    } else if (d.can_pass) {
+      document.getElementById("wo_status").textContent = `Correct! ${d.active_player} may pass now.`;
+    }
+  });
+}
+
+function woPass() {
+  post("/api/wipe-out/pass").then(d => {
+    showJson(d);
+    document.getElementById("wo_status").textContent = `${d.active_player}'s turn.`;
+  });
+}
+
+// ---------------------------------------------------------------------
+// Force Out
+// ---------------------------------------------------------------------
+
+function foSelect() {
+  const players = document.getElementById("fo_players").value.split(",").map(s => s.trim()).filter(Boolean);
+  post("/api/force-out/select", {players}).then(d => {
+    showJson(d);
+    document.getElementById("fo_status").textContent = `${d.value} -- ${d.active_player}'s turn.`;
+  });
+}
+
+function foSubtract() {
+  const amount = parseInt(document.getElementById("fo_amount").value);
+  post("/api/force-out/subtract", {amount}).then(d => {
+    showJson(d);
+    document.getElementById("fo_status").textContent = d.game_over
+      ? `${d.loser} was Forced Out at 0!`
+      : `${d.value} -- ${d.active_player}'s turn.`;
+  });
+}
+
+// ---------------------------------------------------------------------
+// Missing Number
+// ---------------------------------------------------------------------
+
+function mnCycleBox() {
+  post("/api/missing-number/cycle-box").then(d => {
+    showJson(d);
+    document.getElementById("mn_box").textContent = d.box;
+  });
+}
+
+function mnLevel(level) {
+  post("/api/missing-number/select-level", {level}).then(showJson);
+}
+
+function mnGo() {
+  const op = document.getElementById("mn_op").value;
+  post("/api/missing-number/select-op", {op}).then(() => {
+    post("/api/missing-number/go").then(showJson);
+  });
+}
+
+function mnAnswer() {
+  const answer = parseInt(document.getElementById("mn_ans").value);
+  post("/api/missing-number/answer", {answer}).then(d => {
+    showJson(d);
+    if (d.score) document.getElementById("mn_score").textContent =
+      `Score: ${d.score.right}/${d.score.tried}/${d.score.ticks}`;
+  });
+}
+
+logDebug("session", "page loaded");
+showPanel("answer_checker");
+loadKeypad();
+</script>
+</body>
+</html>

@@ -1,0 +1,502 @@
+2026-08-29 19:40:24,898 INFO REQUEST  GET / 
+2026-08-29 19:40:24,901 INFO RESPONSE GET / -> 200 <non-json>
+2026-08-29 19:40:24,935 INFO CLIENT   session: page loaded
+2026-08-29 19:40:24,936 INFO REQUEST  GET /api/keypad 
+2026-08-29 19:40:24,936 INFO RESPONSE GET /api/keypad -> 200 {   "rows": [     [       {         "key": "electro_flash",         "kind": "activity",         "symbol": "\u26a1"       },       {         "key": "missing_number",         "kind": "activity",         "symbol": "?"       },       {         "key": "off",         "kind": "power",         "symbol": "OFF"       },       {         "key": "on",         "kind": "power",         "symbol": "ON"       }     ],     [       {         "key": "wipe_out",         "kind": "activity",         "symbol": "\u2733"       },       {         "key": "number_guesser",         "kind": "activity",         "symbol": "???"       },       {         "key": "force_out",         "kind": "activity",         "symbol": "\u2197"       },       {         "key": "div",         "kind": "op",         "symbol": "\u00f7",         "value": "/"       }     ],     [       {         "key": "7",         "kind": "digit",         "symbol": "7",         "value": 7       },       {         "key": "8",         "kind": "digit",         "symbol": "8",         "value": 8       },       {         "key": "9",         "kind": "digit",         "symbol": "9",         "value": 9       },       {         "key": "mul",         "kind": "op",         "symbol": "\u00d7",         "value": "*"       }     ],     [       {         "key": "4",         "kind": "digit",         "symbol": "4",         "value": 4       },       {         "key": "5",         "kind": "digit",         "symbol": "5",         "value": 5       },       {         "key": "6",         "kind": "digit",         "symbol": "6",         "value": 6       },       {         "key": "sub",         "kind": "op",         "symbol": "\u2212",         "value": "-"       }     ],     [       {         "key": "1",         "kind": "digit",         "symbol": "1",         "value": 1       },       {         "key": "2",         "kind": "digit",         "symbol": "2",         "value": 2       },       {         "key": "3",         "kind": "digit",         "symbol": "3",         "value"
+2026-08-29 19:40:24,950 INFO CLIENT   init: keypad loaded (24 keys)
+2026-08-31 11:56:43,587 INFO REQUEST  GET / 
+2026-08-31 11:56:43,604 INFO RESPONSE GET / -> 200 <non-json>
+2026-08-31 11:56:43,645 INFO CLIENT   session: page loaded
+2026-08-31 11:56:43,647 INFO REQUEST  GET /api/keypad 
+2026-08-31 11:56:43,648 INFO RESPONSE GET /api/keypad -> 200 {   "rows": [     [       {         "key": "electro_flash",         "kind": "activity",         "symbol": "\u26a1"       },       {         "key": "missing_number",         "kind": "activity",         "symbol": "?"       },       {         "key": "off",         "kind": "power",         "symbol": "OFF"       },       {         "key": "on",         "kind": "power",         "symbol": "ON"       }     ],     [       {         "key": "wipe_out",         "kind": "activity",         "symbol": "\u2733"       },       {         "key": "number_guesser",         "kind": "activity",         "symbol": "???"       },       {         "key": "force_out",         "kind": "activity",         "symbol": "\u2197"       },       {         "key": "div",         "kind": "op",         "symbol": "\u00f7",         "value": "/"       }     ],     [       {         "key": "7",         "kind": "digit",         "symbol": "7",         "value": 7       },       {         "key": "8",         "kind": "digit",         "symbol": "8",         "value": 8       },       {         "key": "9",         "kind": "digit",         "symbol": "9",         "value": 9       },       {         "key": "mul",         "kind": "op",         "symbol": "\u00d7",         "value": "*"       }     ],     [       {         "key": "4",         "kind": "digit",         "symbol": "4",         "value": 4       },       {         "key": "5",         "kind": "digit",         "symbol": "5",         "value": 5       },       {         "key": "6",         "kind": "digit",         "symbol": "6",         "value": 6       },       {         "key": "sub",         "kind": "op",         "symbol": "\u2212",         "value": "-"       }     ],     [       {         "key": "1",         "kind": "digit",         "symbol": "1",         "value": 1       },       {         "key": "2",         "kind": "digit",         "symbol": "2",         "value": 2       },       {         "key": "3",         "kind": "digit",         "symbol": "3",         "value"
+2026-08-31 11:56:43,690 INFO CLIENT   init: keypad loaded (24 keys)
+2026-08-31 11:56:43,693 INFO REQUEST  GET /favicon.ico 
+2026-08-31 11:56:43,693 WARNING RESPONSE GET /favicon.ico -> 404 <non-json>
+2026-08-31 12:09:37,356 INFO REQUEST  GET / 
+2026-08-31 12:09:37,357 INFO RESPONSE GET / -> 200 <non-json>
+2026-08-31 12:09:37,604 INFO CLIENT   session: page loaded
+2026-08-31 12:09:37,605 INFO REQUEST  GET /api/keypad 
+2026-08-31 12:09:37,605 INFO RESPONSE GET /api/keypad -> 200 {   "rows": [     [       {         "key": "electro_flash",         "kind": "activity",         "symbol": "\u26a1"       },       {         "key": "missing_number",         "kind": "activity",         "symbol": "?"       },       {         "key": "off",         "kind": "power",         "symbol": "OFF"       },       {         "key": "on",         "kind": "power",         "symbol": "ON"       }     ],     [       {         "key": "wipe_out",         "kind": "activity",         "symbol": "\u2733"       },       {         "key": "number_guesser",         "kind": "activity",         "symbol": "???"       },       {         "key": "force_out",         "kind": "activity",         "symbol": "\u2197"       },       {         "key": "div",         "kind": "op",         "symbol": "\u00f7",         "value": "/"       }     ],     [       {         "key": "7",         "kind": "digit",         "symbol": "7",         "value": 7       },       {         "key": "8",         "kind": "digit",         "symbol": "8",         "value": 8       },       {         "key": "9",         "kind": "digit",         "symbol": "9",         "value": 9       },       {         "key": "mul",         "kind": "op",         "symbol": "\u00d7",         "value": "*"       }     ],     [       {         "key": "4",         "kind": "digit",         "symbol": "4",         "value": 4       },       {         "key": "5",         "kind": "digit",         "symbol": "5",         "value": 5       },       {         "key": "6",         "kind": "digit",         "symbol": "6",         "value": 6       },       {         "key": "sub",         "kind": "op",         "symbol": "\u2212",         "value": "-"       }     ],     [       {         "key": "1",         "kind": "digit",         "symbol": "1",         "value": 1       },       {         "key": "2",         "kind": "digit",         "symbol": "2",         "value": 2       },       {         "key": "3",         "kind": "digit",         "symbol": "3",         "value"
+2026-08-31 12:09:37,633 INFO CLIENT   init: keypad loaded (24 keys)
+2026-08-31 12:11:56,341 INFO CLIENT   keypress: power: on
+2026-08-31 12:11:56,343 INFO REQUEST  POST /api/on 
+2026-08-31 12:11:56,343 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:12:05,501 INFO CLIENT   keypress: op: add (+)
+2026-08-31 12:12:07,901 INFO REQUEST  POST /api/answer-checker/problem {"op": "+", "a": 5, "b": 10}
+2026-08-31 12:12:07,901 INFO RESPONSE POST /api/answer-checker/problem -> 200 {   "attempt": 1,   "display": "5 + 10 =" } 
+2026-08-31 12:12:14,740 INFO REQUEST  POST /api/answer-checker/answer {"answer": 14}
+2026-08-31 12:12:14,740 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "attempt": 2,   "correct": false,   "display": "EEE",   "try_again": true } 
+2026-08-31 12:12:19,501 INFO REQUEST  POST /api/answer-checker/answer {"answer": 15}
+2026-08-31 12:12:19,501 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "correct": true,   "display": "-------\u2b21",   "round_complete": false } 
+2026-08-31 12:12:25,020 INFO CLIENT   nav: switched to number_guesser panel
+2026-08-31 12:12:25,852 INFO REQUEST  POST /api/number-guesser/new 
+2026-08-31 12:12:25,852 INFO RESPONSE POST /api/number-guesser/new -> 200 {   "guesses": 0,   "lower": 9,   "upper": 100 } 
+2026-08-31 12:12:29,821 INFO REQUEST  POST /api/number-guesser/guess {"guess": 50}
+2026-08-31 12:12:29,821 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 1,   "lower": 50,   "upper": 100 } 
+2026-08-31 12:12:36,301 INFO REQUEST  POST /api/number-guesser/guess {"guess": 75}
+2026-08-31 12:12:36,301 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 2,   "lower": 50,   "upper": 75 } 
+2026-08-31 12:12:40,715 INFO REQUEST  POST /api/number-guesser/guess {"guess": 63}
+2026-08-31 12:12:40,716 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 3,   "lower": 50,   "upper": 63 } 
+2026-08-31 12:12:46,556 INFO REQUEST  POST /api/number-guesser/guess {"guess": 56}
+2026-08-31 12:12:46,556 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 4,   "lower": 56,   "upper": 63 } 
+2026-08-31 12:12:50,507 INFO REQUEST  POST /api/number-guesser/guess {"guess": 60}
+2026-08-31 12:12:50,507 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 5,   "lower": 56,   "upper": 60 } 
+2026-08-31 12:12:55,269 INFO REQUEST  POST /api/number-guesser/guess {"guess": 58}
+2026-08-31 12:12:55,269 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 6,   "lower": 56,   "upper": 58 } 
+2026-08-31 12:12:58,820 INFO REQUEST  POST /api/number-guesser/guess {"guess": 57}
+2026-08-31 12:12:58,821 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": true,   "guesses": 7 } 
+2026-08-31 12:14:36,340 INFO CLIENT   nav: switched to answer_checker panel
+2026-08-31 12:14:37,092 INFO CLIENT   keypress: activity: electro_flash
+2026-08-31 12:14:37,812 INFO CLIENT   keypress: activity: electro_flash
+2026-08-31 12:14:38,260 INFO CLIENT   keypress: activity: electro_flash
+2026-08-31 12:14:38,588 INFO CLIENT   keypress: activity: electro_flash
+2026-08-31 12:14:39,220 INFO CLIENT   keypress: activity: missing_number
+2026-08-31 12:14:39,222 INFO REQUEST  POST /api/missing-number/cycle-box 
+2026-08-31 12:14:39,222 INFO RESPONSE POST /api/missing-number/cycle-box -> 200 {   "box": "right" } 
+2026-08-31 12:14:39,979 INFO CLIENT   keypress: activity: number_guesser
+2026-08-31 12:14:39,980 INFO REQUEST  POST /api/number-guesser/new 
+2026-08-31 12:14:39,980 INFO RESPONSE POST /api/number-guesser/new -> 200 {   "guesses": 0,   "lower": 9,   "upper": 100 } 
+2026-08-31 12:14:40,643 INFO CLIENT   keypress: activity: number_guesser
+2026-08-31 12:14:40,644 INFO REQUEST  POST /api/number-guesser/new 
+2026-08-31 12:14:40,644 INFO RESPONSE POST /api/number-guesser/new -> 200 {   "guesses": 0,   "lower": 9,   "upper": 100 } 
+2026-08-31 12:14:41,364 INFO CLIENT   keypress: activity: wipe_out
+2026-08-31 12:14:42,700 INFO CLIENT   keypress: activity: force_out
+2026-08-31 12:14:43,364 INFO CLIENT   keypress: activity: force_out
+2026-08-31 12:14:44,644 INFO CLIENT   keypress: activity: memory_bank
+2026-08-31 12:14:44,645 INFO REQUEST  POST /api/memory-bank/store {"op": "+", "a": 5, "b": 10}
+2026-08-31 12:14:44,645 INFO RESPONSE POST /api/memory-bank/store -> 200 {   "max": 10,   "stored": 1 } 
+2026-08-31 12:14:45,404 INFO CLIENT   keypress: activity: memory_bank
+2026-08-31 12:14:45,406 INFO REQUEST  POST /api/memory-bank/store {"op": "", "a": null, "b": null}
+2026-08-31 12:14:46,444 INFO CLIENT   keypress: activity: wipe_out
+2026-08-31 12:14:46,948 INFO CLIENT   keypress: activity: electro_flash
+2026-08-31 12:14:47,556 INFO CLIENT   keypress: activity: missing_number
+2026-08-31 12:14:47,558 INFO REQUEST  POST /api/missing-number/cycle-box 
+2026-08-31 12:14:47,559 INFO RESPONSE POST /api/missing-number/cycle-box -> 200 {   "box": "left" } 
+2026-08-31 12:14:47,938 INFO CLIENT   keypress: activity: number_guesser
+2026-08-31 12:14:47,940 INFO REQUEST  POST /api/number-guesser/new 
+2026-08-31 12:14:47,940 INFO RESPONSE POST /api/number-guesser/new -> 200 {   "guesses": 0,   "lower": 9,   "upper": 100 } 
+2026-08-31 12:14:48,795 INFO CLIENT   keypress: control: equals
+2026-08-31 12:14:48,796 INFO REQUEST  POST /api/number-guesser/guess {"guess": 57}
+2026-08-31 12:14:48,796 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 1,   "lower": 9,   "upper": 57 } 
+2026-08-31 12:14:49,650 INFO CLIENT   keypress: control: equals
+2026-08-31 12:14:49,652 INFO REQUEST  POST /api/number-guesser/guess {"guess": 57}
+2026-08-31 12:14:49,652 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 2,   "lower": 9,   "upper": 57 } 
+2026-08-31 12:14:50,099 INFO CLIENT   keypress: control: equals
+2026-08-31 12:14:50,100 INFO REQUEST  POST /api/number-guesser/guess {"guess": 57}
+2026-08-31 12:14:50,100 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 3,   "lower": 9,   "upper": 57 } 
+2026-08-31 12:14:50,330 INFO CLIENT   keypress: control: equals
+2026-08-31 12:14:50,331 INFO REQUEST  POST /api/number-guesser/guess {"guess": 57}
+2026-08-31 12:14:50,331 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 4,   "lower": 9,   "upper": 57 } 
+2026-08-31 12:14:50,818 INFO CLIENT   keypress: activity: memory_bank
+2026-08-31 12:14:50,820 INFO REQUEST  POST /api/memory-bank/store {"op": "+", "a": 5, "b": 10}
+2026-08-31 12:14:50,820 INFO RESPONSE POST /api/memory-bank/store -> 200 {   "max": 10,   "stored": 2 } 
+2026-08-31 12:14:53,172 INFO CLIENT   keypress: activity: force_out
+2026-08-31 12:14:54,082 INFO CLIENT   keypress: power: off
+2026-08-31 12:14:54,084 INFO REQUEST  POST /api/off 
+2026-08-31 12:14:54,084 INFO RESPONSE POST /api/off -> 200 {   "display": "",   "power": false } 
+2026-08-31 12:14:54,875 INFO CLIENT   keypress: power: on
+2026-08-31 12:14:54,875 INFO REQUEST  POST /api/on 
+2026-08-31 12:14:54,876 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:14:56,683 INFO CLIENT   keypress: control: go
+2026-08-31 12:14:57,451 INFO CLIENT   keypress: activity: memory_bank
+2026-08-31 12:14:57,452 INFO REQUEST  POST /api/memory-bank/store {"op": "+", "a": 5, "b": 10}
+2026-08-31 12:14:57,452 INFO RESPONSE POST /api/memory-bank/store -> 200 {   "max": 10,   "stored": 1 } 
+2026-08-31 12:14:58,388 INFO CLIENT   keypress: activity: electro_flash
+2026-08-31 12:14:58,836 INFO CLIENT   keypress: activity: wipe_out
+2026-08-31 12:14:59,339 INFO CLIENT   keypress: activity: number_guesser
+2026-08-31 12:14:59,340 INFO REQUEST  POST /api/number-guesser/new 
+2026-08-31 12:14:59,340 INFO RESPONSE POST /api/number-guesser/new -> 200 {   "guesses": 0,   "lower": 9,   "upper": 100 } 
+2026-08-31 12:14:59,907 INFO CLIENT   keypress: activity: missing_number
+2026-08-31 12:14:59,908 INFO REQUEST  POST /api/missing-number/cycle-box 
+2026-08-31 12:14:59,909 INFO RESPONSE POST /api/missing-number/cycle-box -> 200 {   "box": "right" } 
+2026-08-31 12:15:00,604 INFO CLIENT   keypress: activity: force_out
+2026-08-31 12:15:01,684 INFO CLIENT   keypress: control: equals
+2026-08-31 12:15:01,685 INFO REQUEST  POST /api/force-out/subtract {"amount": null}
+2026-08-31 12:15:01,685 WARNING RESPONSE POST /api/force-out/subtract -> 400 {   "error": "Select Force Out first." } 
+2026-08-31 12:15:02,674 INFO CLIENT   keypress: power: off
+2026-08-31 12:15:02,676 INFO REQUEST  POST /api/off 
+2026-08-31 12:15:02,676 INFO RESPONSE POST /api/off -> 200 {   "display": "",   "power": false } 
+2026-08-31 12:15:03,027 INFO CLIENT   keypress: power: on
+2026-08-31 12:15:03,029 INFO REQUEST  POST /api/on 
+2026-08-31 12:15:03,029 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:15:03,404 INFO CLIENT   keypress: power: on
+2026-08-31 12:15:03,405 INFO REQUEST  POST /api/on 
+2026-08-31 12:15:03,405 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:15:03,620 INFO CLIENT   keypress: power: on
+2026-08-31 12:15:03,621 INFO REQUEST  POST /api/on 
+2026-08-31 12:15:03,622 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:15:04,204 INFO CLIENT   keypress: power: off
+2026-08-31 12:15:04,205 INFO REQUEST  POST /api/off 
+2026-08-31 12:15:04,206 INFO RESPONSE POST /api/off -> 200 {   "display": "",   "power": false } 
+2026-08-31 12:15:05,114 INFO CLIENT   nav: switched to electro_flash panel
+2026-08-31 12:15:05,892 INFO CLIENT   keypress: power: on
+2026-08-31 12:15:05,893 INFO REQUEST  POST /api/on 
+2026-08-31 12:15:05,893 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:15:06,763 INFO CLIENT   nav: switched to number_guesser panel
+2026-08-31 12:15:07,619 INFO CLIENT   keypress: power: on
+2026-08-31 12:15:07,621 INFO REQUEST  POST /api/on 
+2026-08-31 12:15:07,621 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:15:08,179 INFO CLIENT   keypress: power: on
+2026-08-31 12:15:08,180 INFO REQUEST  POST /api/on 
+2026-08-31 12:15:08,181 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:15:08,356 INFO CLIENT   keypress: power: on
+2026-08-31 12:15:08,357 INFO REQUEST  POST /api/on 
+2026-08-31 12:15:08,357 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:15:26,195 INFO REQUEST  POST /api/answer-checker/problem {"op": "+", "a": 5, "b": 10}
+2026-08-31 12:15:26,195 INFO RESPONSE POST /api/answer-checker/problem -> 200 {   "attempt": 1,   "display": "5 + 10 =" } 
+2026-08-31 12:15:29,923 INFO REQUEST  POST /api/answer-checker/answer {"answer": 16}
+2026-08-31 12:15:29,923 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "attempt": 2,   "correct": false,   "display": "EEE",   "try_again": true } 
+2026-08-31 12:15:33,842 INFO REQUEST  POST /api/answer-checker/answer {"answer": 10}
+2026-08-31 12:15:33,842 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "correct": false,   "display": " 10 = 15",   "round_complete": false,   "try_again": false } 
+2026-08-31 12:15:36,978 INFO REQUEST  POST /api/answer-checker/answer {"answer": 50}
+2026-08-31 12:15:36,978 WARNING RESPONSE POST /api/answer-checker/answer -> 400 {   "error": "No problem entered yet." } 
+2026-08-31 12:15:39,716 INFO REQUEST  POST /api/answer-checker/problem {"op": "+", "a": 5, "b": 10}
+2026-08-31 12:15:39,716 INFO RESPONSE POST /api/answer-checker/problem -> 200 {   "attempt": 1,   "display": "5 + 10 =" } 
+2026-08-31 12:15:40,404 INFO REQUEST  POST /api/answer-checker/answer {"answer": 50}
+2026-08-31 12:15:40,404 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "attempt": 2,   "correct": false,   "display": "EEE",   "try_again": true } 
+2026-08-31 12:15:45,627 INFO REQUEST  POST /api/answer-checker/answer {"answer": 66}
+2026-08-31 12:15:45,628 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "correct": false,   "display": " 10 = 15",   "round_complete": false,   "try_again": false } 
+2026-08-31 12:15:49,316 INFO REQUEST  POST /api/answer-checker/answer {"answer": 30}
+2026-08-31 12:15:49,316 WARNING RESPONSE POST /api/answer-checker/answer -> 400 {   "error": "No problem entered yet." } 
+2026-08-31 12:15:50,604 INFO REQUEST  POST /api/answer-checker/answer {"answer": 30}
+2026-08-31 12:15:50,604 WARNING RESPONSE POST /api/answer-checker/answer -> 400 {   "error": "No problem entered yet." } 
+2026-08-31 12:15:50,842 INFO REQUEST  POST /api/answer-checker/answer {"answer": 30}
+2026-08-31 12:15:50,843 WARNING RESPONSE POST /api/answer-checker/answer -> 400 {   "error": "No problem entered yet." } 
+2026-08-31 12:15:55,467 INFO REQUEST  POST /api/answer-checker/problem {"op": "+", "a": 5, "b": 10}
+2026-08-31 12:15:55,467 INFO RESPONSE POST /api/answer-checker/problem -> 200 {   "attempt": 1,   "display": "5 + 10 =" } 
+2026-08-31 12:15:56,915 INFO REQUEST  POST /api/answer-checker/problem {"op": "+", "a": 5, "b": 10}
+2026-08-31 12:15:56,916 INFO RESPONSE POST /api/answer-checker/problem -> 200 {   "attempt": 1,   "display": "5 + 10 =" } 
+2026-08-31 12:16:00,523 INFO REQUEST  POST /api/answer-checker/answer {"answer": 10}
+2026-08-31 12:16:00,524 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "attempt": 2,   "correct": false,   "display": "EEE",   "try_again": true } 
+2026-08-31 12:16:04,811 INFO REQUEST  POST /api/answer-checker/answer {"answer": 16}
+2026-08-31 12:16:04,811 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "correct": false,   "display": " 10 = 15",   "round_complete": false,   "try_again": false } 
+2026-08-31 12:20:26,923 INFO CLIENT   nav: switched to answer_checker panel
+2026-08-31 12:20:27,738 INFO CLIENT   keypress: power: off
+2026-08-31 12:20:27,740 INFO REQUEST  POST /api/off 
+2026-08-31 12:20:27,740 INFO RESPONSE POST /api/off -> 200 {   "display": "",   "power": false } 
+2026-08-31 12:20:28,362 INFO CLIENT   keypress: power: on
+2026-08-31 12:20:28,363 INFO REQUEST  POST /api/on 
+2026-08-31 12:20:28,364 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:20:29,405 INFO REQUEST  GET / 
+2026-08-31 12:20:29,406 INFO RESPONSE GET / -> 200 <non-json>
+2026-08-31 12:20:29,423 INFO CLIENT   session: page loaded
+2026-08-31 12:20:29,424 INFO REQUEST  GET /api/keypad 
+2026-08-31 12:20:29,424 INFO RESPONSE GET /api/keypad -> 200 {   "rows": [     [       {         "key": "electro_flash",         "kind": "activity",         "symbol": "\u26a1"       },       {         "key": "missing_number",         "kind": "activity",         "symbol": "?"       },       {         "key": "off",         "kind": "power",         "symbol": "OFF"       },       {         "key": "on",         "kind": "power",         "symbol": "ON"       }     ],     [       {         "key": "wipe_out",         "kind": "activity",         "symbol": "\u2733"       },       {         "key": "number_guesser",         "kind": "activity",         "symbol": "???"       },       {         "key": "force_out",         "kind": "activity",         "symbol": "\u2197"       },       {         "key": "div",         "kind": "op",         "symbol": "\u00f7",         "value": "/"       }     ],     [       {         "key": "7",         "kind": "digit",         "symbol": "7",         "value": 7       },       {         "key": "8",         "kind": "digit",         "symbol": "8",         "value": 8       },       {         "key": "9",         "kind": "digit",         "symbol": "9",         "value": 9       },       {         "key": "mul",         "kind": "op",         "symbol": "\u00d7",         "value": "*"       }     ],     [       {         "key": "4",         "kind": "digit",         "symbol": "4",         "value": 4       },       {         "key": "5",         "kind": "digit",         "symbol": "5",         "value": 5       },       {         "key": "6",         "kind": "digit",         "symbol": "6",         "value": 6       },       {         "key": "sub",         "kind": "op",         "symbol": "\u2212",         "value": "-"       }     ],     [       {         "key": "1",         "kind": "digit",         "symbol": "1",         "value": 1       },       {         "key": "2",         "kind": "digit",         "symbol": "2",         "value": 2       },       {         "key": "3",         "kind": "digit",         "symbol": "3",         "value"
+2026-08-31 12:20:29,429 INFO CLIENT   init: keypad loaded (24 keys)
+2026-08-31 12:20:31,360 INFO CLIENT   keypress: power: on
+2026-08-31 12:20:31,361 INFO REQUEST  POST /api/on 
+2026-08-31 12:20:31,362 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:20:32,153 INFO CLIENT   keypress: power: off
+2026-08-31 12:20:32,154 INFO REQUEST  POST /api/off 
+2026-08-31 12:20:32,154 INFO RESPONSE POST /api/off -> 200 {   "display": "",   "power": false } 
+2026-08-31 12:29:41,277 INFO REQUEST  GET / 
+2026-08-31 12:29:41,289 INFO RESPONSE GET / -> 200 <non-json>
+2026-08-31 12:29:41,371 INFO CLIENT   session: page loaded
+2026-08-31 12:29:41,372 INFO REQUEST  GET /api/keypad 
+2026-08-31 12:29:41,373 INFO RESPONSE GET /api/keypad -> 200 {   "rows": [     [       {         "key": "electro_flash",         "kind": "activity",         "symbol": "\u26a1"       },       {         "key": "missing_number",         "kind": "activity",         "symbol": "?"       },       {         "key": "off",         "kind": "power",         "symbol": "OFF"       },       {         "key": "on",         "kind": "power",         "symbol": "ON"       }     ],     [       {         "key": "wipe_out",         "kind": "activity",         "symbol": "\u2733"       },       {         "key": "number_guesser",         "kind": "activity",         "symbol": "???"       },       {         "key": "force_out",         "kind": "activity",         "symbol": "\u2197"       },       {         "key": "div",         "kind": "op",         "symbol": "\u00f7",         "value": "/"       }     ],     [       {         "key": "7",         "kind": "digit",         "symbol": "7",         "value": 7       },       {         "key": "8",         "kind": "digit",         "symbol": "8",         "value": 8       },       {         "key": "9",         "kind": "digit",         "symbol": "9",         "value": 9       },       {         "key": "mul",         "kind": "op",         "symbol": "\u00d7",         "value": "*"       }     ],     [       {         "key": "4",         "kind": "digit",         "symbol": "4",         "value": 4       },       {         "key": "5",         "kind": "digit",         "symbol": "5",         "value": 5       },       {         "key": "6",         "kind": "digit",         "symbol": "6",         "value": 6       },       {         "key": "sub",         "kind": "op",         "symbol": "\u2212",         "value": "-"       }     ],     [       {         "key": "1",         "kind": "digit",         "symbol": "1",         "value": 1       },       {         "key": "2",         "kind": "digit",         "symbol": "2",         "value": 2       },       {         "key": "3",         "kind": "digit",         "symbol": "3",         "value"
+2026-08-31 12:29:41,405 INFO CLIENT   init: keypad loaded (24 keys)
+2026-08-31 12:30:13,409 INFO CLIENT   keypress: power: on
+2026-08-31 12:30:13,410 INFO REQUEST  POST /api/on 
+2026-08-31 12:30:13,410 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:30:16,096 INFO CLIENT   keypress: digit: 3 (3)
+2026-08-31 12:30:18,377 INFO CLIENT   keypress: op: add (+)
+2026-08-31 12:30:19,976 INFO CLIENT   keypress: digit: 5 (5)
+2026-08-31 12:30:20,976 INFO REQUEST  POST /api/answer-checker/problem {"op": "+", "a": 3, "b": 5}
+2026-08-31 12:30:20,976 INFO RESPONSE POST /api/answer-checker/problem -> 200 {   "attempt": 1,   "display": "3 + 5 =" } 
+2026-08-31 12:30:23,344 INFO CLIENT   keypress: digit: 7 (7)
+2026-08-31 12:30:24,744 INFO CLIENT   keypress: control: equals
+2026-08-31 12:30:24,745 INFO REQUEST  POST /api/answer-checker/answer {"answer": 7}
+2026-08-31 12:30:24,745 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "attempt": 2,   "correct": false,   "display": "EEE",   "try_again": true } 
+2026-08-31 12:30:29,424 INFO CLIENT   keypress: digit: 8 (8)
+2026-08-31 12:30:34,640 INFO CLIENT   keypress: digit: 8 (8)
+2026-08-31 12:30:35,512 INFO REQUEST  POST /api/answer-checker/answer {"answer": 8}
+2026-08-31 12:30:35,513 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "correct": true,   "display": "-------\u2b21",   "round_complete": false } 
+2026-08-31 12:32:27,748 INFO CLIENT   keypress: control: go
+2026-08-31 12:32:28,867 INFO CLIENT   keypress: control: go
+2026-08-31 12:32:30,452 INFO CLIENT   nav: switched to answer_checker panel
+2026-08-31 12:32:31,635 INFO CLIENT   keypress: activity: electro_flash
+2026-08-31 12:32:32,331 INFO CLIENT   keypress: activity: wipe_out
+2026-08-31 12:32:33,099 INFO CLIENT   keypress: control: go
+2026-08-31 12:32:33,100 INFO REQUEST  POST /api/wipe-out/go 
+2026-08-31 12:32:33,100 WARNING RESPONSE POST /api/wipe-out/go -> 400 {   "error": "Select Wipe Out players first." } 
+2026-08-31 12:32:34,259 INFO CLIENT   keypress: control: go
+2026-08-31 12:32:34,260 INFO REQUEST  POST /api/wipe-out/go 
+2026-08-31 12:32:34,260 WARNING RESPONSE POST /api/wipe-out/go -> 400 {   "error": "Select Wipe Out players first." } 
+2026-08-31 12:32:34,803 INFO CLIENT   keypress: control: go
+2026-08-31 12:32:34,805 INFO REQUEST  POST /api/wipe-out/go 
+2026-08-31 12:32:34,805 WARNING RESPONSE POST /api/wipe-out/go -> 400 {   "error": "Select Wipe Out players first." } 
+2026-08-31 12:32:35,003 INFO CLIENT   keypress: control: go
+2026-08-31 12:32:35,004 INFO REQUEST  POST /api/wipe-out/go 
+2026-08-31 12:32:35,004 WARNING RESPONSE POST /api/wipe-out/go -> 400 {   "error": "Select Wipe Out players first." } 
+2026-08-31 12:32:36,843 INFO CLIENT   keypress: activity: memory_bank
+2026-08-31 12:32:36,845 INFO REQUEST  POST /api/memory-bank/store {"op": "+", "a": 3, "b": 5}
+2026-08-31 12:32:36,845 INFO RESPONSE POST /api/memory-bank/store -> 200 {   "max": 10,   "stored": 1 } 
+2026-08-31 12:32:37,843 INFO REQUEST  POST /api/off 
+2026-08-31 12:32:37,844 INFO RESPONSE POST /api/off -> 200 {   "display": "",   "power": false } 
+2026-08-31 12:32:37,845 INFO CLIENT   keypress: power: off
+2026-08-31 12:32:38,411 INFO CLIENT   keypress: power: off
+2026-08-31 12:32:38,413 INFO REQUEST  POST /api/off 
+2026-08-31 12:32:38,413 INFO RESPONSE POST /api/off -> 200 {   "display": "",   "power": false } 
+2026-08-31 12:32:39,067 INFO CLIENT   keypress: power: on
+2026-08-31 12:32:39,069 INFO REQUEST  POST /api/on 
+2026-08-31 12:32:39,069 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:32:55,603 INFO REQUEST  POST /api/answer-checker/problem {"op": "+", "a": 3, "b": 9}
+2026-08-31 12:32:55,603 INFO RESPONSE POST /api/answer-checker/problem -> 200 {   "attempt": 1,   "display": "3 + 9 =" } 
+2026-08-31 12:33:00,563 INFO REQUEST  POST /api/answer-checker/answer {"answer": 11}
+2026-08-31 12:33:00,563 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "attempt": 2,   "correct": false,   "display": "EEE",   "try_again": true } 
+2026-08-31 12:33:04,354 INFO REQUEST  POST /api/answer-checker/answer {"answer": 13}
+2026-08-31 12:33:04,355 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "correct": false,   "display": "+ 9 = 12",   "round_complete": false,   "try_again": false } 
+2026-08-31 12:33:09,274 INFO REQUEST  POST /api/answer-checker/answer {"answer": 12}
+2026-08-31 12:33:09,275 WARNING RESPONSE POST /api/answer-checker/answer -> 400 {   "error": "No problem entered yet." } 
+2026-08-31 12:33:10,149 INFO REQUEST  POST /api/answer-checker/answer {"answer": 12}
+2026-08-31 12:33:10,150 WARNING RESPONSE POST /api/answer-checker/answer -> 400 {   "error": "No problem entered yet." } 
+2026-08-31 12:33:10,914 INFO REQUEST  POST /api/answer-checker/problem {"op": "+", "a": 3, "b": 9}
+2026-08-31 12:33:10,914 INFO RESPONSE POST /api/answer-checker/problem -> 200 {   "attempt": 1,   "display": "3 + 9 =" } 
+2026-08-31 12:33:11,682 INFO REQUEST  POST /api/answer-checker/answer {"answer": 12}
+2026-08-31 12:33:11,682 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "correct": true,   "display": "-------\u2b21",   "round_complete": false } 
+2026-08-31 12:33:17,067 INFO REQUEST  POST /api/answer-checker/problem {"op": "+", "a": 3, "b": 9}
+2026-08-31 12:33:17,067 INFO RESPONSE POST /api/answer-checker/problem -> 200 {   "attempt": 1,   "display": "3 + 9 =" } 
+2026-08-31 12:33:20,658 INFO REQUEST  POST /api/answer-checker/answer {"answer": 13}
+2026-08-31 12:33:20,658 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "attempt": 2,   "correct": false,   "display": "EEE",   "try_again": true } 
+2026-08-31 12:37:16,220 INFO CLIENT   keypress: power: off
+2026-08-31 12:37:16,221 INFO REQUEST  POST /api/off 
+2026-08-31 12:37:16,236 INFO RESPONSE POST /api/off -> 200 {   "display": "",   "power": false } 
+2026-08-31 12:37:16,812 INFO CLIENT   keypress: power: off
+2026-08-31 12:37:16,813 INFO REQUEST  POST /api/off 
+2026-08-31 12:37:16,813 INFO RESPONSE POST /api/off -> 200 {   "display": "",   "power": false } 
+2026-08-31 12:37:17,004 INFO CLIENT   keypress: power: off
+2026-08-31 12:37:17,005 INFO REQUEST  POST /api/off 
+2026-08-31 12:37:17,005 INFO RESPONSE POST /api/off -> 200 {   "display": "",   "power": false } 
+2026-08-31 12:37:18,912 INFO REQUEST  GET / 
+2026-08-31 12:37:18,913 INFO RESPONSE GET / -> 200 <non-json>
+2026-08-31 12:37:18,928 INFO CLIENT   session: page loaded
+2026-08-31 12:37:18,929 INFO REQUEST  GET /api/keypad 
+2026-08-31 12:37:18,929 INFO RESPONSE GET /api/keypad -> 200 {   "rows": [     [       {         "key": "electro_flash",         "kind": "activity",         "symbol": "\u26a1"       },       {         "key": "missing_number",         "kind": "activity",         "symbol": "?"       },       {         "key": "off",         "kind": "power",         "symbol": "OFF"       },       {         "key": "on",         "kind": "power",         "symbol": "ON"       }     ],     [       {         "key": "wipe_out",         "kind": "activity",         "symbol": "\u2733"       },       {         "key": "number_guesser",         "kind": "activity",         "symbol": "???"       },       {         "key": "force_out",         "kind": "activity",         "symbol": "\u2197"       },       {         "key": "div",         "kind": "op",         "symbol": "\u00f7",         "value": "/"       }     ],     [       {         "key": "7",         "kind": "digit",         "symbol": "7",         "value": 7       },       {         "key": "8",         "kind": "digit",         "symbol": "8",         "value": 8       },       {         "key": "9",         "kind": "digit",         "symbol": "9",         "value": 9       },       {         "key": "mul",         "kind": "op",         "symbol": "\u00d7",         "value": "*"       }     ],     [       {         "key": "4",         "kind": "digit",         "symbol": "4",         "value": 4       },       {         "key": "5",         "kind": "digit",         "symbol": "5",         "value": 5       },       {         "key": "6",         "kind": "digit",         "symbol": "6",         "value": 6       },       {         "key": "sub",         "kind": "op",         "symbol": "\u2212",         "value": "-"       }     ],     [       {         "key": "1",         "kind": "digit",         "symbol": "1",         "value": 1       },       {         "key": "2",         "kind": "digit",         "symbol": "2",         "value": 2       },       {         "key": "3",         "kind": "digit",         "symbol": "3",         "value"
+2026-08-31 12:37:18,934 INFO CLIENT   init: keypad loaded (24 keys)
+2026-08-31 12:37:20,309 INFO CLIENT   keypress: power: off
+2026-08-31 12:37:20,311 INFO REQUEST  POST /api/off 
+2026-08-31 12:37:20,311 INFO RESPONSE POST /api/off -> 200 {   "display": "",   "power": false } 
+2026-08-31 12:37:21,738 INFO REQUEST  GET / 
+2026-08-31 12:37:21,739 INFO RESPONSE GET / -> 200 <non-json>
+2026-08-31 12:37:21,757 INFO CLIENT   session: page loaded
+2026-08-31 12:37:21,758 INFO REQUEST  GET /api/keypad 
+2026-08-31 12:37:21,759 INFO RESPONSE GET /api/keypad -> 200 {   "rows": [     [       {         "key": "electro_flash",         "kind": "activity",         "symbol": "\u26a1"       },       {         "key": "missing_number",         "kind": "activity",         "symbol": "?"       },       {         "key": "off",         "kind": "power",         "symbol": "OFF"       },       {         "key": "on",         "kind": "power",         "symbol": "ON"       }     ],     [       {         "key": "wipe_out",         "kind": "activity",         "symbol": "\u2733"       },       {         "key": "number_guesser",         "kind": "activity",         "symbol": "???"       },       {         "key": "force_out",         "kind": "activity",         "symbol": "\u2197"       },       {         "key": "div",         "kind": "op",         "symbol": "\u00f7",         "value": "/"       }     ],     [       {         "key": "7",         "kind": "digit",         "symbol": "7",         "value": 7       },       {         "key": "8",         "kind": "digit",         "symbol": "8",         "value": 8       },       {         "key": "9",         "kind": "digit",         "symbol": "9",         "value": 9       },       {         "key": "mul",         "kind": "op",         "symbol": "\u00d7",         "value": "*"       }     ],     [       {         "key": "4",         "kind": "digit",         "symbol": "4",         "value": 4       },       {         "key": "5",         "kind": "digit",         "symbol": "5",         "value": 5       },       {         "key": "6",         "kind": "digit",         "symbol": "6",         "value": 6       },       {         "key": "sub",         "kind": "op",         "symbol": "\u2212",         "value": "-"       }     ],     [       {         "key": "1",         "kind": "digit",         "symbol": "1",         "value": 1       },       {         "key": "2",         "kind": "digit",         "symbol": "2",         "value": 2       },       {         "key": "3",         "kind": "digit",         "symbol": "3",         "value"
+2026-08-31 12:37:21,763 INFO CLIENT   init: keypad loaded (24 keys)
+2026-08-31 12:42:55,251 INFO CLIENT   keypress: power: off
+2026-08-31 12:42:55,252 INFO REQUEST  POST /api/off 
+2026-08-31 12:42:55,253 INFO RESPONSE POST /api/off -> 200 {   "display": "",   "power": false } 
+2026-08-31 12:42:55,917 INFO CLIENT   keypress: power: off
+2026-08-31 12:42:55,918 INFO REQUEST  POST /api/off 
+2026-08-31 12:42:55,918 INFO RESPONSE POST /api/off -> 200 {   "display": "",   "power": false } 
+2026-08-31 12:42:56,333 INFO CLIENT   keypress: power: on
+2026-08-31 12:42:56,334 INFO REQUEST  POST /api/on 
+2026-08-31 12:42:56,334 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:42:56,822 INFO CLIENT   keypress: power: off
+2026-08-31 12:42:56,822 INFO REQUEST  POST /api/off 
+2026-08-31 12:42:56,823 INFO RESPONSE POST /api/off -> 200 {   "display": "",   "power": false } 
+2026-08-31 12:42:58,922 INFO REQUEST  GET / 
+2026-08-31 12:42:58,922 INFO RESPONSE GET / -> 200 <non-json>
+2026-08-31 12:42:58,935 INFO CLIENT   session: page loaded
+2026-08-31 12:42:58,937 INFO REQUEST  GET /api/keypad 
+2026-08-31 12:42:58,937 INFO RESPONSE GET /api/keypad -> 200 {   "rows": [     [       {         "key": "electro_flash",         "kind": "activity",         "symbol": "\u26a1"       },       {         "key": "missing_number",         "kind": "activity",         "symbol": "?"       },       {         "key": "off",         "kind": "power",         "symbol": "OFF"       },       {         "key": "on",         "kind": "power",         "symbol": "ON"       }     ],     [       {         "key": "wipe_out",         "kind": "activity",         "symbol": "\u2733"       },       {         "key": "number_guesser",         "kind": "activity",         "symbol": "???"       },       {         "key": "force_out",         "kind": "activity",         "symbol": "\u2197"       },       {         "key": "div",         "kind": "op",         "symbol": "\u00f7",         "value": "/"       }     ],     [       {         "key": "7",         "kind": "digit",         "symbol": "7",         "value": 7       },       {         "key": "8",         "kind": "digit",         "symbol": "8",         "value": 8       },       {         "key": "9",         "kind": "digit",         "symbol": "9",         "value": 9       },       {         "key": "mul",         "kind": "op",         "symbol": "\u00d7",         "value": "*"       }     ],     [       {         "key": "4",         "kind": "digit",         "symbol": "4",         "value": 4       },       {         "key": "5",         "kind": "digit",         "symbol": "5",         "value": 5       },       {         "key": "6",         "kind": "digit",         "symbol": "6",         "value": 6       },       {         "key": "sub",         "kind": "op",         "symbol": "\u2212",         "value": "-"       }     ],     [       {         "key": "1",         "kind": "digit",         "symbol": "1",         "value": 1       },       {         "key": "2",         "kind": "digit",         "symbol": "2",         "value": 2       },       {         "key": "3",         "kind": "digit",         "symbol": "3",         "value"
+2026-08-31 12:42:58,942 INFO CLIENT   init: keypad loaded (24 keys)
+2026-08-31 12:43:54,964 INFO CLIENT   keypress: power: on
+2026-08-31 12:43:54,965 INFO REQUEST  POST /api/on 
+2026-08-31 12:43:54,966 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:44:00,276 INFO CLIENT   keypress: op: sub (-)
+2026-08-31 12:44:03,172 INFO REQUEST  POST /api/answer-checker/problem {"op": "-", "a": 5, "b": 6}
+2026-08-31 12:44:03,172 WARNING RESPONSE POST /api/answer-checker/problem -> 400 {   "error": "DataMan will not accept an operand that would make the answer negative." } 
+2026-08-31 12:44:13,316 INFO REQUEST  POST /api/answer-checker/answer {"answer": -1}
+2026-08-31 12:44:13,316 WARNING RESPONSE POST /api/answer-checker/answer -> 400 {   "error": "No problem entered yet." } 
+2026-08-31 12:44:15,028 INFO REQUEST  POST /api/answer-checker/problem {"op": "-", "a": 5, "b": 6}
+2026-08-31 12:44:15,029 WARNING RESPONSE POST /api/answer-checker/problem -> 400 {   "error": "DataMan will not accept an operand that would make the answer negative." } 
+2026-08-31 12:44:19,412 INFO REQUEST  POST /api/answer-checker/answer {"answer": 1}
+2026-08-31 12:44:19,412 WARNING RESPONSE POST /api/answer-checker/answer -> 400 {   "error": "No problem entered yet." } 
+2026-08-31 12:44:20,716 INFO REQUEST  POST /api/answer-checker/problem {"op": "-", "a": 5, "b": 6}
+2026-08-31 12:44:20,716 WARNING RESPONSE POST /api/answer-checker/problem -> 400 {   "error": "DataMan will not accept an operand that would make the answer negative." } 
+2026-08-31 12:44:23,436 INFO REQUEST  POST /api/answer-checker/problem {"op": "-", "a": 5, "b": 6}
+2026-08-31 12:44:23,436 WARNING RESPONSE POST /api/answer-checker/problem -> 400 {   "error": "DataMan will not accept an operand that would make the answer negative." } 
+2026-08-31 12:44:43,332 INFO REQUEST  POST /api/answer-checker/problem {"op": "-", "a": 5, "b": 6}
+2026-08-31 12:44:43,332 WARNING RESPONSE POST /api/answer-checker/problem -> 400 {   "error": "DataMan will not accept an operand that would make the answer negative." } 
+2026-08-31 12:44:47,171 INFO REQUEST  POST /api/answer-checker/problem {"op": "-", "a": 5, "b": 5}
+2026-08-31 12:44:47,172 INFO RESPONSE POST /api/answer-checker/problem -> 200 {   "attempt": 1,   "display": "5 - 5 =" } 
+2026-08-31 12:44:50,947 INFO REQUEST  POST /api/answer-checker/answer {"answer": 0}
+2026-08-31 12:44:50,947 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "correct": true,   "display": "-------\u2b21",   "round_complete": false } 
+2026-08-31 12:44:52,747 INFO CLIENT   nav: switched to answer_checker panel
+2026-08-31 12:44:53,355 INFO CLIENT   keypress: power: off
+2026-08-31 12:44:53,356 INFO REQUEST  POST /api/off 
+2026-08-31 12:44:53,356 INFO RESPONSE POST /api/off -> 200 {   "display": "",   "power": false } 
+2026-08-31 12:44:54,871 INFO REQUEST  GET / 
+2026-08-31 12:44:54,871 INFO RESPONSE GET / -> 200 <non-json>
+2026-08-31 12:44:54,886 INFO CLIENT   session: page loaded
+2026-08-31 12:44:54,887 INFO REQUEST  GET /api/keypad 
+2026-08-31 12:44:54,887 INFO RESPONSE GET /api/keypad -> 200 {   "rows": [     [       {         "key": "electro_flash",         "kind": "activity",         "symbol": "\u26a1"       },       {         "key": "missing_number",         "kind": "activity",         "symbol": "?"       },       {         "key": "off",         "kind": "power",         "symbol": "OFF"       },       {         "key": "on",         "kind": "power",         "symbol": "ON"       }     ],     [       {         "key": "wipe_out",         "kind": "activity",         "symbol": "\u2733"       },       {         "key": "number_guesser",         "kind": "activity",         "symbol": "???"       },       {         "key": "force_out",         "kind": "activity",         "symbol": "\u2197"       },       {         "key": "div",         "kind": "op",         "symbol": "\u00f7",         "value": "/"       }     ],     [       {         "key": "7",         "kind": "digit",         "symbol": "7",         "value": 7       },       {         "key": "8",         "kind": "digit",         "symbol": "8",         "value": 8       },       {         "key": "9",         "kind": "digit",         "symbol": "9",         "value": 9       },       {         "key": "mul",         "kind": "op",         "symbol": "\u00d7",         "value": "*"       }     ],     [       {         "key": "4",         "kind": "digit",         "symbol": "4",         "value": 4       },       {         "key": "5",         "kind": "digit",         "symbol": "5",         "value": 5       },       {         "key": "6",         "kind": "digit",         "symbol": "6",         "value": 6       },       {         "key": "sub",         "kind": "op",         "symbol": "\u2212",         "value": "-"       }     ],     [       {         "key": "1",         "kind": "digit",         "symbol": "1",         "value": 1       },       {         "key": "2",         "kind": "digit",         "symbol": "2",         "value": 2       },       {         "key": "3",         "kind": "digit",         "symbol": "3",         "value"
+2026-08-31 12:44:54,903 INFO CLIENT   init: keypad loaded (24 keys)
+2026-08-31 12:49:35,040 INFO CLIENT   nav: switched to answer_checker panel
+2026-08-31 12:49:36,416 INFO CLIENT   keypress: power: on
+2026-08-31 12:49:36,416 INFO REQUEST  POST /api/on 
+2026-08-31 12:49:36,417 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:49:38,919 INFO CLIENT   keypress: digit: 8 (8)
+2026-08-31 12:49:38,920 WARNING CLIENT   keypress-warning: key "8" pressed but no input field is focused -- ignored
+2026-08-31 12:49:39,743 INFO CLIENT   keypress: op: sub (-)
+2026-08-31 12:49:39,744 WARNING CLIENT   keypress-warning: key "-" pressed but no input field is focused -- ignored
+2026-08-31 12:49:44,063 INFO CLIENT   keypress: digit: 8 (8)
+2026-08-31 12:49:46,303 INFO CLIENT   keypress: op: sub (-)
+2026-08-31 12:49:48,231 INFO CLIENT   keypress: digit: 9 (9)
+2026-08-31 12:49:49,343 INFO REQUEST  POST /api/answer-checker/problem {"op": "-", "a": 8, "b": 9}
+2026-08-31 12:49:49,343 WARNING RESPONSE POST /api/answer-checker/problem -> 400 {   "error": "DataMan will not accept an operand that would make the answer negative." } 
+2026-08-31 12:49:52,847 INFO CLIENT   keypress: power: on
+2026-08-31 12:49:52,848 INFO REQUEST  POST /api/on 
+2026-08-31 12:49:52,849 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:49:54,751 INFO CLIENT   keypress: power: on
+2026-08-31 12:49:54,752 INFO REQUEST  POST /api/on 
+2026-08-31 12:49:54,752 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:49:54,967 INFO CLIENT   keypress: power: on
+2026-08-31 12:49:54,968 INFO REQUEST  POST /api/on 
+2026-08-31 12:49:54,968 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:49:57,151 INFO CLIENT   keypress: digit: 9 (9)
+2026-08-31 12:50:00,495 INFO REQUEST  POST /api/answer-checker/problem {"op": "-", "a": 8, "b": null}
+2026-08-31 12:50:02,175 INFO REQUEST  POST /api/answer-checker/problem {"op": "-", "a": 8, "b": 9}
+2026-08-31 12:50:02,175 WARNING RESPONSE POST /api/answer-checker/problem -> 400 {   "error": "DataMan will not accept an operand that would make the answer negative." } 
+2026-08-31 12:50:05,663 INFO REQUEST  POST /api/answer-checker/problem {"op": "-", "a": 8, "b": 7}
+2026-08-31 12:50:05,663 INFO RESPONSE POST /api/answer-checker/problem -> 200 {   "attempt": 1,   "display": "8 - 7 =" } 
+2026-08-31 12:50:08,359 INFO REQUEST  POST /api/answer-checker/answer {"answer": 1}
+2026-08-31 12:50:08,359 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "correct": true,   "display": "-------\u2b21",   "round_complete": false } 
+2026-08-31 12:50:12,007 INFO CLIENT   keypress: activity: force_out
+2026-08-31 12:50:14,727 INFO CLIENT   keypress: activity: memory_bank
+2026-08-31 12:50:14,728 INFO REQUEST  POST /api/memory-bank/store {"op": "-", "a": 8, "b": 7}
+2026-08-31 12:50:14,729 INFO RESPONSE POST /api/memory-bank/store -> 200 {   "max": 10,   "stored": 1 } 
+2026-08-31 12:50:16,439 INFO CLIENT   keypress: control: go
+2026-08-31 12:50:16,440 INFO REQUEST  POST /api/memory-bank/go 
+2026-08-31 12:50:16,440 INFO RESPONSE POST /api/memory-bank/go -> 200 {   "display": "8 - 7 =",   "remaining": 1 } 
+2026-08-31 12:50:18,815 INFO CLIENT   keypress: power: off
+2026-08-31 12:50:18,816 INFO REQUEST  POST /api/off 
+2026-08-31 12:50:18,816 INFO RESPONSE POST /api/off -> 200 {   "display": "",   "power": false } 
+2026-08-31 12:50:19,423 INFO CLIENT   keypress: power: on
+2026-08-31 12:50:19,426 INFO REQUEST  POST /api/on 
+2026-08-31 12:50:19,426 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-08-31 12:50:21,287 INFO CLIENT   keypress: digit: 9 (9)
+2026-08-31 12:50:22,287 INFO CLIENT   keypress: op: div (/)
+2026-08-31 12:50:23,198 INFO CLIENT   keypress: digit: 2 (2)
+2026-08-31 12:50:24,071 INFO CLIENT   keypress: control: equals
+2026-08-31 12:50:24,072 INFO REQUEST  POST /api/answer-checker/answer {"answer": null}
+2026-08-31 12:50:24,072 WARNING RESPONSE POST /api/answer-checker/answer -> 400 {   "error": "No problem entered yet." } 
+2026-08-31 12:50:28,519 INFO CLIENT   keypress: digit: 9 (9)
+2026-08-31 12:50:30,111 INFO CLIENT   keypress: op: div (/)
+2026-08-31 12:50:32,174 INFO CLIENT   keypress: digit: 2 (2)
+2026-08-31 12:50:33,615 INFO REQUEST  POST /api/answer-checker/problem {"op": "/", "a": 9, "b": 2}
+2026-08-31 12:50:33,615 INFO RESPONSE POST /api/answer-checker/problem -> 200 {   "attempt": 1,   "display": "9 \u00f7 2 =" } 
+2026-08-31 12:50:40,062 INFO REQUEST  POST /api/answer-checker/answer {"answer": 4}
+2026-08-31 12:50:40,063 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "correct": true,   "display": "-------\u2b21",   "remainder": 1,   "round_complete": false } 
+2026-09-01 13:53:14,300 INFO REQUEST  GET / 
+2026-09-01 13:53:14,312 INFO RESPONSE GET / -> 200 <non-json>
+2026-09-01 13:53:14,337 INFO CLIENT   session: page loaded
+2026-09-01 13:53:14,338 INFO REQUEST  GET /api/keypad 
+2026-09-01 13:53:14,338 INFO RESPONSE GET /api/keypad -> 200 {   "rows": [     [       {         "key": "electro_flash",         "kind": "activity",         "symbol": "\u26a1"       },       {         "key": "missing_number",         "kind": "activity",         "symbol": "?"       },       {         "key": "off",         "kind": "power",         "symbol": "OFF"       },       {         "key": "on",         "kind": "power",         "symbol": "ON"       }     ],     [       {         "key": "wipe_out",         "kind": "activity",         "symbol": "\u2733"       },       {         "key": "number_guesser",         "kind": "activity",         "symbol": "???"       },       {         "key": "force_out",         "kind": "activity",         "symbol": "\u2197"       },       {         "key": "div",         "kind": "op",         "symbol": "\u00f7",         "value": "/"       }     ],     [       {         "key": "7",         "kind": "digit",         "symbol": "7",         "value": 7       },       {         "key": "8",         "kind": "digit",         "symbol": "8",         "value": 8       },       {         "key": "9",         "kind": "digit",         "symbol": "9",         "value": 9       },       {         "key": "mul",         "kind": "op",         "symbol": "\u00d7",         "value": "*"       }     ],     [       {         "key": "4",         "kind": "digit",         "symbol": "4",         "value": 4       },       {         "key": "5",         "kind": "digit",         "symbol": "5",         "value": 5       },       {         "key": "6",         "kind": "digit",         "symbol": "6",         "value": 6       },       {         "key": "sub",         "kind": "op",         "symbol": "\u2212",         "value": "-"       }     ],     [       {         "key": "1",         "kind": "digit",         "symbol": "1",         "value": 1       },       {         "key": "2",         "kind": "digit",         "symbol": "2",         "value": 2       },       {         "key": "3",         "kind": "digit",         "symbol": "3",         "value"
+2026-09-01 13:53:14,377 INFO CLIENT   init: keypad loaded (24 keys)
+2026-09-01 13:53:14,379 INFO REQUEST  GET /favicon.ico 
+2026-09-01 13:53:14,379 WARNING RESPONSE GET /favicon.ico -> 404 <non-json>
+2026-09-01 13:53:18,981 INFO CLIENT   keypress: power: on
+2026-09-01 13:53:18,982 INFO REQUEST  POST /api/on 
+2026-09-01 13:53:18,982 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-09-01 13:53:19,821 INFO CLIENT   nav: switched to number_guesser panel
+2026-09-01 13:53:23,517 INFO REQUEST  POST /api/number-guesser/new 
+2026-09-01 13:53:23,517 INFO RESPONSE POST /api/number-guesser/new -> 200 {   "guesses": 0,   "lower": 9,   "upper": 100 } 
+2026-09-01 13:53:29,061 INFO REQUEST  POST /api/number-guesser/guess {"guess": 75}
+2026-09-01 13:53:29,061 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 1,   "lower": 9,   "upper": 75 } 
+2026-09-01 13:53:32,941 INFO REQUEST  POST /api/number-guesser/guess {"guess": 50}
+2026-09-01 13:53:32,941 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 2,   "lower": 9,   "upper": 50 } 
+2026-09-01 13:53:36,085 INFO REQUEST  POST /api/number-guesser/guess {"guess": 25}
+2026-09-01 13:53:36,085 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 3,   "lower": 9,   "upper": 25 } 
+2026-09-01 13:53:40,006 INFO REQUEST  POST /api/number-guesser/guess {"guess": 15}
+2026-09-01 13:53:40,006 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 4,   "lower": 15,   "upper": 25 } 
+2026-09-01 13:53:43,685 INFO REQUEST  POST /api/number-guesser/guess {"guess": 20}
+2026-09-01 13:53:43,685 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": true,   "guesses": 5 } 
+2026-09-01 13:53:56,980 INFO REQUEST  POST /api/number-guesser/new 
+2026-09-01 13:53:56,981 INFO RESPONSE POST /api/number-guesser/new -> 200 {   "guesses": 0,   "lower": 9,   "upper": 100 } 
+2026-09-01 13:54:16,428 INFO REQUEST  POST /api/number-guesser/new 
+2026-09-01 13:54:16,429 INFO RESPONSE POST /api/number-guesser/new -> 200 {   "guesses": 0,   "lower": 9,   "upper": 100 } 
+2026-09-01 13:54:19,958 INFO REQUEST  POST /api/number-guesser/guess {"guess": 50}
+2026-09-01 13:54:19,958 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 1,   "lower": 50,   "upper": 100 } 
+2026-09-01 13:54:24,909 INFO REQUEST  POST /api/number-guesser/guess {"guess": 75}
+2026-09-01 13:54:24,909 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 2,   "lower": 75,   "upper": 100 } 
+2026-09-01 13:54:29,270 INFO REQUEST  POST /api/number-guesser/guess {"guess": 85}
+2026-09-01 13:54:29,270 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 3,   "lower": 85,   "upper": 100 } 
+2026-09-01 13:54:33,726 INFO REQUEST  POST /api/number-guesser/guess {"guess": 93}
+2026-09-01 13:54:33,726 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 4,   "lower": 85,   "upper": 93 } 
+2026-09-01 13:54:37,622 INFO REQUEST  POST /api/number-guesser/guess {"guess": 87}
+2026-09-01 13:54:37,622 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 5,   "lower": 87,   "upper": 93 } 
+2026-09-01 13:54:40,797 INFO REQUEST  POST /api/number-guesser/guess {"guess": 90}
+2026-09-01 13:54:40,797 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 6,   "lower": 87,   "upper": 90 } 
+2026-09-01 13:54:44,197 INFO REQUEST  POST /api/number-guesser/guess {"guess": 88}
+2026-09-01 13:54:44,198 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 7,   "lower": 88,   "upper": 90 } 
+2026-09-01 13:54:47,564 INFO REQUEST  POST /api/number-guesser/guess {"guess": 89}
+2026-09-01 13:54:47,565 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": true,   "guesses": 8 } 
+2026-09-01 13:54:57,469 INFO CLIENT   nav: switched to missing_number panel
+2026-09-01 13:55:02,629 INFO CLIENT   keypress: op: add (+)
+2026-09-01 13:55:04,693 INFO REQUEST  POST /api/missing-number/select-level {"level": 1}
+2026-09-01 13:55:04,693 INFO RESPONSE POST /api/missing-number/select-level -> 200 {   "level": 1 } 
+2026-09-01 13:55:06,300 INFO REQUEST  POST /api/missing-number/select-op {"op": "+"}
+2026-09-01 13:55:06,300 INFO RESPONSE POST /api/missing-number/select-op -> 200 {   "op": "+" } 
+2026-09-01 13:55:06,304 INFO REQUEST  POST /api/missing-number/go 
+2026-09-01 13:55:06,304 WARNING RESPONSE POST /api/missing-number/go -> 400 {   "error": "Press the Missing Number key and choose an operator first." } 
+2026-09-01 13:55:12,109 INFO CLIENT   keypress: activity: missing_number
+2026-09-01 13:55:12,111 INFO REQUEST  POST /api/missing-number/cycle-box 
+2026-09-01 13:55:12,111 INFO RESPONSE POST /api/missing-number/cycle-box -> 200 {   "box": "right" } 
+2026-09-01 13:55:13,989 INFO REQUEST  POST /api/missing-number/select-level {"level": 1}
+2026-09-01 13:55:13,989 INFO RESPONSE POST /api/missing-number/select-level -> 200 {   "level": 1 } 
+2026-09-01 13:55:15,813 INFO REQUEST  POST /api/missing-number/select-op {"op": "+"}
+2026-09-01 13:55:15,814 INFO RESPONSE POST /api/missing-number/select-op -> 200 {   "op": "+" } 
+2026-09-01 13:55:15,818 INFO REQUEST  POST /api/missing-number/go 
+2026-09-01 13:55:15,818 INFO RESPONSE POST /api/missing-number/go -> 200 {   "display": " + 8 = ?",   "remaining": 10 } 
+2026-09-01 13:55:25,924 INFO REQUEST  POST /api/missing-number/answer {"answer": 2}
+2026-09-01 13:55:25,924 INFO RESPONSE POST /api/missing-number/answer -> 200 {   "correct": false,   "display": "EEE",   "try_again": true } 
+2026-09-01 13:55:30,973 INFO REQUEST  POST /api/missing-number/select-op {"op": "+"}
+2026-09-01 13:55:30,973 INFO RESPONSE POST /api/missing-number/select-op -> 200 {   "op": "+" } 
+2026-09-01 13:55:30,978 INFO REQUEST  POST /api/missing-number/go 
+2026-09-01 13:55:30,978 INFO RESPONSE POST /api/missing-number/go -> 200 {   "display": " + 4 = ?",   "remaining": 10 } 
+2026-09-02 11:51:20,594 INFO REQUEST  GET / 
+2026-09-02 11:51:21,153 INFO RESPONSE GET / -> 200 <non-json>
+2026-09-02 11:51:21,189 INFO REQUEST  GET /api/keypad 
+2026-09-02 11:51:21,191 INFO RESPONSE GET /api/keypad -> 200 {   "rows": [     [       {         "key": "electro_flash",         "kind": "activity",         "symbol": "\u26a1"       },       {         "key": "missing_number",         "kind": "activity",         "symbol": "?"       },       {         "key": "off",         "kind": "power",         "symbol": "OFF"       },       {         "key": "on",         "kind": "power",         "symbol": "ON"       }     ],     [       {         "key": "wipe_out",         "kind": "activity",         "symbol": "\u2733"       },       {         "key": "number_guesser",         "kind": "activity",         "symbol": "???"       },       {         "key": "force_out",         "kind": "activity",         "symbol": "\u2197"       },       {         "key": "div",         "kind": "op",         "symbol": "\u00f7",         "value": "/"       }     ],     [       {         "key": "7",         "kind": "digit",         "symbol": "7",         "value": 7       },       {         "key": "8",         "kind": "digit",         "symbol": "8",         "value": 8       },       {         "key": "9",         "kind": "digit",         "symbol": "9",         "value": 9       },       {         "key": "mul",         "kind": "op",         "symbol": "\u00d7",         "value": "*"       }     ],     [       {         "key": "4",         "kind": "digit",         "symbol": "4",         "value": 4       },       {         "key": "5",         "kind": "digit",         "symbol": "5",         "value": 5       },       {         "key": "6",         "kind": "digit",         "symbol": "6",         "value": 6       },       {         "key": "sub",         "kind": "op",         "symbol": "\u2212",         "value": "-"       }     ],     [       {         "key": "1",         "kind": "digit",         "symbol": "1",         "value": 1       },       {         "key": "2",         "kind": "digit",         "symbol": "2",         "value": 2       },       {         "key": "3",         "kind": "digit",         "symbol": "3",         "value"
+2026-09-02 11:51:21,210 INFO CLIENT   session: page loaded
+2026-09-02 11:51:21,269 INFO CLIENT   init: keypad loaded (24 keys)
+2026-09-02 11:51:21,333 INFO REQUEST  GET /favicon.ico 
+2026-09-02 11:51:21,335 WARNING RESPONSE GET /favicon.ico -> 404 <non-json>
+2026-09-02 11:51:28,777 INFO CLIENT   keypress: power: on
+2026-09-02 11:51:28,778 INFO REQUEST  POST /api/on 
+2026-09-02 11:51:28,780 INFO RESPONSE POST /api/on -> 200 {   "display": "=",   "mode": "answer_checker",   "power": true } 
+2026-09-02 11:51:30,960 INFO CLIENT   nav: switched to number_guesser panel
+2026-09-02 11:51:32,595 INFO REQUEST  POST /api/number-guesser/new 
+2026-09-02 11:51:32,596 INFO RESPONSE POST /api/number-guesser/new -> 200 {   "guesses": 0,   "lower": 9,   "upper": 100 } 
+2026-09-02 11:51:41,532 INFO REQUEST  POST /api/number-guesser/guess {"guess": 22}
+2026-09-02 11:51:41,534 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 1,   "lower": 22,   "upper": 100 } 
+2026-09-02 11:51:53,904 INFO REQUEST  POST /api/number-guesser/guess {"guess": 70}
+2026-09-02 11:51:53,905 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 2,   "lower": 22,   "upper": 70 } 
+2026-09-02 11:52:04,159 INFO REQUEST  POST /api/number-guesser/guess {"guess": 50}
+2026-09-02 11:52:04,159 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 3,   "lower": 50,   "upper": 70 } 
+2026-09-02 11:52:05,707 INFO REQUEST  POST /api/number-guesser/guess {"guess": 50}
+2026-09-02 11:52:05,708 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 4,   "lower": 50,   "upper": 70 } 
+2026-09-02 11:52:07,699 INFO REQUEST  POST /api/number-guesser/guess {"guess": 50}
+2026-09-02 11:52:07,700 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 5,   "lower": 50,   "upper": 70 } 
+2026-09-02 11:52:08,722 INFO REQUEST  POST /api/number-guesser/guess {"guess": 50}
+2026-09-02 11:52:08,723 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 6,   "lower": 50,   "upper": 70 } 
+2026-09-02 11:52:09,130 INFO REQUEST  POST /api/number-guesser/guess {"guess": 50}
+2026-09-02 11:52:09,131 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 7,   "lower": 50,   "upper": 70 } 
+2026-09-02 11:52:09,390 INFO REQUEST  POST /api/number-guesser/guess {"guess": 50}
+2026-09-02 11:52:09,390 INFO RESPONSE POST /api/number-guesser/guess -> 200 {   "correct": false,   "guesses": 8,   "lower": 50,   "upper": 70 } 
+2026-09-02 11:52:11,160 INFO REQUEST  POST /api/number-guesser/new 
+2026-09-02 11:52:11,162 INFO RESPONSE POST /api/number-guesser/new -> 200 {   "guesses": 0,   "lower": 9,   "upper": 100 } 
+2026-09-02 11:52:15,462 INFO CLIENT   nav: switched to answer_checker panel
+2026-09-02 11:52:28,836 INFO CLIENT   keypress: op: add (+)
+2026-09-02 11:52:33,683 INFO CLIENT   keypress: digit: 0 (0)
+2026-09-02 11:52:36,204 INFO REQUEST  POST /api/answer-checker/problem {"op": "+", "a": 5, "b": 0}
+2026-09-02 11:52:36,205 INFO RESPONSE POST /api/answer-checker/problem -> 200 {   "attempt": 1,   "display": "5 + 0 =" } 
+2026-09-02 11:52:45,728 INFO REQUEST  POST /api/answer-checker/answer {"answer": 6}
+2026-09-02 11:52:45,730 INFO REQUEST  POST /api/answer-checker/answer {"answer": 6}
+2026-09-02 11:52:45,731 INFO REQUEST  POST /api/answer-checker/answer {"answer": 6}
+2026-09-02 11:52:45,733 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "attempt": 2,   "correct": false,   "display": "EEE",   "try_again": true } 
+2026-09-02 11:52:45,736 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "attempt": 2,   "correct": false,   "display": "EEE",   "try_again": true } 
+2026-09-02 11:52:45,740 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "attempt": 2,   "correct": false,   "display": "EEE",   "try_again": true } 
+2026-09-02 11:52:53,001 INFO REQUEST  POST /api/answer-checker/answer {"answer": 5}
+2026-09-02 11:52:53,004 INFO RESPONSE POST /api/answer-checker/answer -> 200 {   "correct": true,   "display": "-------\u2b21",   "round_complete": false } 
