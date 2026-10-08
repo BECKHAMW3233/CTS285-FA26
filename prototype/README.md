@@ -25,7 +25,7 @@ python -m unittest test_criteria -v
 | Stubbed data | `data_stub.py` | In-memory Problem and Attempt records behind access methods. Replaceable. |
 | Evidence | `test_criteria.py` | Demonstrates acceptance criteria against the logic layer without the interface. |
 
-Design record: `../../docs/decisions/m4-design-investigation-record.md`
+Design record: [docs/decisions/m4-design-investigation-record.md](https://github.com/BECKHAMW3233/CTS285-FA26/blob/main/docs/decisions/m4-design-investigation-record.md)
 
 ## Acceptance criteria demonstrated
 
