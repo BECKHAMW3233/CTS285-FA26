@@ -1,0 +1,216 @@
+[
+  {
+    "name": "Fire Bolt",
+    "level": 0,
+    "school": "evocation",
+    "classes": ["wizard"],
+    "cast_type": "attack",
+    "damage_dice": "1d10",
+    "damage_type": "fire",
+    "cantrip_scale_levels": [1, 5, 11, 17]
+  },
+  {
+    "name": "Ray of Frost",
+    "level": 0,
+    "school": "evocation",
+    "classes": ["wizard"],
+    "cast_type": "attack",
+    "damage_dice": "1d8",
+    "damage_type": "cold",
+    "cantrip_scale_levels": [1, 5, 11, 17]
+  },
+  {
+    "name": "Magic Missile",
+    "level": 1,
+    "school": "evocation",
+    "classes": ["wizard"],
+    "cast_type": "auto_hit_multi",
+    "dart_dice": "1d4+1",
+    "damage_type": "force",
+    "base_darts": 3
+  },
+  {
+    "name": "Scorching Ray",
+    "level": 2,
+    "school": "evocation",
+    "classes": ["wizard"],
+    "cast_type": "auto_hit_multi",
+    "dart_dice": "2d6",
+    "damage_type": "fire",
+    "base_darts": 3
+  },
+  {
+    "name": "Fireball",
+    "level": 3,
+    "school": "evocation",
+    "classes": ["wizard"],
+    "cast_type": "save",
+    "save_ability": "dexterity",
+    "damage_dice": "8d6",
+    "damage_type": "fire"
+  },
+  {
+    "name": "Ice Storm",
+    "level": 4,
+    "school": "evocation",
+    "classes": ["wizard"],
+    "cast_type": "save",
+    "save_ability": "dexterity",
+    "damage_dice": "10d6",
+    "damage_type": "cold"
+  },
+  {
+    "name": "Cone of Cold",
+    "level": 5,
+    "school": "evocation",
+    "classes": ["wizard"],
+    "cast_type": "save",
+    "save_ability": "constitution",
+    "damage_dice": "12d8",
+    "damage_type": "cold"
+  },
+  {
+    "name": "Chain Lightning",
+    "level": 6,
+    "school": "evocation",
+    "classes": ["wizard"],
+    "cast_type": "auto_hit_multi",
+    "dart_dice": "3d8",
+    "damage_type": "lightning",
+    "base_darts": 4
+  },
+  {
+    "name": "Prismatic Spray",
+    "level": 7,
+    "school": "evocation",
+    "classes": ["wizard"],
+    "cast_type": "save",
+    "save_ability": "dexterity",
+    "damage_dice": "16d6",
+    "damage_type": "force"
+  },
+  {
+    "name": "Sunburst",
+    "level": 8,
+    "school": "evocation",
+    "classes": ["wizard"],
+    "cast_type": "save",
+    "save_ability": "constitution",
+    "damage_dice": "18d6",
+    "damage_type": "radiant"
+  },
+  {
+    "name": "Meteor Swarm",
+    "level": 9,
+    "school": "evocation",
+    "classes": ["wizard"],
+    "cast_type": "save",
+    "save_ability": "dexterity",
+    "damage_dice": "20d6",
+    "damage_type": "fire"
+  },
+
+  {
+    "name": "Sacred Flame",
+    "level": 0,
+    "school": "evocation",
+    "classes": ["cleric"],
+    "cast_type": "save",
+    "save_ability": "dexterity",
+    "damage_dice": "1d8",
+    "damage_type": "radiant",
+    "cantrip_scale_levels": [1, 5, 11, 17]
+  },
+  {
+    "name": "Toll the Dead",
+    "level": 0,
+    "school": "necromancy",
+    "classes": ["cleric"],
+    "cast_type": "save",
+    "save_ability": "wisdom",
+    "damage_dice": "1d8",
+    "damage_type": "necrotic",
+    "cantrip_scale_levels": [1, 5, 11, 17]
+  },
+  {
+    "name": "Cure Wounds",
+    "level": 1,
+    "school": "evocation",
+    "classes": ["cleric"],
+    "cast_type": "heal",
+    "heal_dice": "1d8"
+  },
+  {
+    "name": "Prayer of Healing",
+    "level": 2,
+    "school": "evocation",
+    "classes": ["cleric"],
+    "cast_type": "heal",
+    "heal_dice": "3d8"
+  },
+  {
+    "name": "Spirit Guardians",
+    "level": 3,
+    "school": "conjuration",
+    "classes": ["cleric"],
+    "cast_type": "save",
+    "save_ability": "constitution",
+    "damage_dice": "8d8",
+    "damage_type": "radiant"
+  },
+  {
+    "name": "Guardian of Faith",
+    "level": 4,
+    "school": "conjuration",
+    "classes": ["cleric"],
+    "cast_type": "attack",
+    "damage_dice": "4d8",
+    "damage_type": "radiant"
+  },
+  {
+    "name": "Flame Strike",
+    "level": 5,
+    "school": "evocation",
+    "classes": ["cleric"],
+    "cast_type": "save",
+    "save_ability": "dexterity",
+    "damage_dice": "12d6",
+    "damage_type": "fire"
+  },
+  {
+    "name": "Heal",
+    "level": 6,
+    "school": "evocation",
+    "classes": ["cleric"],
+    "cast_type": "heal",
+    "heal_dice": "10d8"
+  },
+  {
+    "name": "Fire Storm",
+    "level": 7,
+    "school": "evocation",
+    "classes": ["cleric"],
+    "cast_type": "save",
+    "save_ability": "dexterity",
+    "damage_dice": "16d6",
+    "damage_type": "fire"
+  },
+  {
+    "name": "Divine Wrath",
+    "level": 8,
+    "school": "evocation",
+    "classes": ["cleric"],
+    "cast_type": "save",
+    "save_ability": "constitution",
+    "damage_dice": "18d6",
+    "damage_type": "radiant"
+  },
+  {
+    "name": "Mass Heal",
+    "level": 9,
+    "school": "evocation",
+    "classes": ["cleric"],
+    "cast_type": "heal",
+    "heal_dice": "20d8"
+  }
+]

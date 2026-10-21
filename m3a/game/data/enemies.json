@@ -1,0 +1,51 @@
+[
+  {"name": "Goblin", "tier": 1, "attack": 3, "defense": 8, "health": 7, "xp_value": 20, "min_copper": 75, "max_copper": 225, "common_drops": ["Potion of Healing"], "rare_drops": ["Dagger"], "spawn_chance": 0.3, "is_boss": false},
+  {"name": "Rat", "tier": 1, "attack": 2, "defense": 4, "health": 6, "xp_value": 20, "min_copper": 45, "max_copper": 150, "common_drops": ["Potion of Healing"], "rare_drops": ["Shortsword"], "spawn_chance": 0.3, "is_boss": false},
+  {"name": "Bandit", "tier": 1, "attack": 3, "defense": 4, "health": 9, "xp_value": 20, "min_copper": 150, "max_copper": 300, "common_drops": ["Potion of Healing"], "rare_drops": ["Leather Armor"], "spawn_chance": 0.2, "is_boss": false},
+  {"name": "Wolf", "tier": 1, "attack": 4, "defense": 4, "health": 6, "xp_value": 20, "min_copper": 75, "max_copper": 180, "common_drops": ["Potion of Healing"], "rare_drops": ["Throwing Knives"], "spawn_chance": 0.2, "is_boss": false},
+
+  {"name": "Orc", "tier": 2, "attack": 5, "defense": 9, "health": 38, "xp_value": 35, "min_copper": 225, "max_copper": 450, "common_drops": ["Potion of Healing"], "rare_drops": ["Leather Armor"], "spawn_chance": 0.25, "is_boss": false},
+  {"name": "Skeleton", "tier": 2, "attack": 3, "defense": 6, "health": 46, "xp_value": 35, "min_copper": 180, "max_copper": 375, "common_drops": ["Potion of Healing"], "rare_drops": ["Shortsword"], "spawn_chance": 0.25, "is_boss": false},
+  {"name": "Dark Elf", "tier": 2, "attack": 7, "defense": 6, "health": 36, "xp_value": 35, "min_copper": 300, "max_copper": 525, "common_drops": ["Potion of Healing"], "rare_drops": ["Longbow"], "spawn_chance": 0.25, "is_boss": false},
+  {"name": "Ghost", "tier": 2, "attack": 5, "defense": 12, "health": 41, "xp_value": 35, "min_copper": 270, "max_copper": 480, "common_drops": ["Potion of Healing"], "rare_drops": ["Mace"], "spawn_chance": 0.25, "is_boss": false},
+
+  {"name": "Ogre", "tier": 3, "attack": 6, "defense": 15, "health": 62, "xp_value": 55, "min_copper": 375, "max_copper": 750, "common_drops": ["Potion of Healing"], "rare_drops": ["Chain Shirt"], "spawn_chance": 0.2, "is_boss": false},
+  {"name": "Werewolf", "tier": 3, "attack": 9, "defense": 7, "health": 68, "xp_value": 55, "min_copper": 450, "max_copper": 825, "common_drops": ["Potion of Healing"], "rare_drops": ["Greataxe"], "spawn_chance": 0.2, "is_boss": false},
+  {"name": "Vampire", "tier": 3, "attack": 7, "defense": 11, "health": 78, "xp_value": 55, "min_copper": 525, "max_copper": 900, "common_drops": ["Potion of Healing"], "rare_drops": ["Longsword"], "spawn_chance": 0.2, "is_boss": false},
+  {"name": "Giant Spider", "tier": 3, "attack": 6, "defense": 11, "health": 72, "xp_value": 55, "min_copper": 420, "max_copper": 780, "common_drops": ["Potion of Healing"], "rare_drops": ["Tower Shield"], "spawn_chance": 0.2, "is_boss": false},
+
+  {"name": "Troll", "tier": 4, "attack": 6, "defense": 13, "health": 90, "xp_value": 80, "min_copper": 600, "max_copper": 1200, "common_drops": ["Potion of Greater Healing"], "rare_drops": ["Half Plate"], "spawn_chance": 0.15, "is_boss": false},
+  {"name": "Stone Golem", "tier": 4, "attack": 8, "defense": 16, "health": 108, "xp_value": 80, "min_copper": 675, "max_copper": 1275, "common_drops": ["Potion of Greater Healing"], "rare_drops": ["Chain Mail"], "spawn_chance": 0.15, "is_boss": false},
+  {"name": "Demon", "tier": 4, "attack": 10, "defense": 10, "health": 101, "xp_value": 80, "min_copper": 750, "max_copper": 1350, "common_drops": ["Potion of Greater Healing"], "rare_drops": ["Heavy Crossbow"], "spawn_chance": 0.15, "is_boss": false},
+
+  {"name": "Dark Knight", "tier": 5, "attack": 7, "defense": 19, "health": 130, "xp_value": 110, "min_copper": 900, "max_copper": 1800, "common_drops": ["Potion of Greater Healing"], "rare_drops": ["Chain Mail"], "spawn_chance": 0.1, "is_boss": false},
+  {"name": "Lich", "tier": 5, "attack": 11, "defense": 11, "health": 119, "xp_value": 110, "min_copper": 975, "max_copper": 1875, "common_drops": ["Potion of Greater Healing"], "rare_drops": ["Flame Blade"], "spawn_chance": 0.1, "is_boss": false},
+  {"name": "Death Knight", "tier": 5, "attack": 9, "defense": 15, "health": 141, "xp_value": 110, "min_copper": 1050, "max_copper": 1950, "common_drops": ["Potion of Greater Healing"], "rare_drops": ["Warhammer"], "spawn_chance": 0.1, "is_boss": false},
+
+  {"name": "Dragon", "tier": 6, "attack": 8, "defense": 17, "health": 136, "xp_value": 145, "min_copper": 1500, "max_copper": 3000, "common_drops": ["Potion of Greater Healing"], "rare_drops": ["Runed Greatsword"], "spawn_chance": 0.05, "is_boss": false},
+  {"name": "Ancient Wyrm", "tier": 6, "attack": 12, "defense": 14, "health": 150, "xp_value": 145, "min_copper": 1800, "max_copper": 3300, "common_drops": ["Potion of Greater Healing"], "rare_drops": ["Soul Reaper"], "spawn_chance": 0.05, "is_boss": false},
+  {"name": "Demon Lord", "tier": 6, "attack": 10, "defense": 17, "health": 164, "xp_value": 145, "min_copper": 2250, "max_copper": 3750, "common_drops": ["Potion of Greater Healing"], "rare_drops": ["Hunter's Longbow"], "spawn_chance": 0.05, "is_boss": false},
+
+  {"name": "Hellhound", "tier": 7, "attack": 11, "defense": 17, "health": 163, "xp_value": 185, "min_copper": 1050, "max_copper": 1650, "common_drops": ["Potion of Superior Healing"], "rare_drops": ["Dragonfang Blade"], "spawn_chance": 0.08, "is_boss": false},
+  {"name": "Shadow Assassin", "tier": 7, "attack": 13, "defense": 14, "health": 143, "xp_value": 185, "min_copper": 1125, "max_copper": 1725, "common_drops": ["Potion of Superior Healing"], "rare_drops": ["Stormcaller Bow"], "spawn_chance": 0.08, "is_boss": false},
+  {"name": "Frost Giant", "tier": 7, "attack": 11, "defense": 24, "health": 204, "xp_value": 185, "min_copper": 1200, "max_copper": 1800, "common_drops": ["Potion of Superior Healing"], "rare_drops": ["Titan's Maul"], "spawn_chance": 0.08, "is_boss": false},
+
+  {"name": "Abyssal Wraith", "tier": 8, "attack": 13, "defense": 17, "health": 171, "xp_value": 230, "min_copper": 1350, "max_copper": 2100, "common_drops": ["Potion of Superior Healing"], "rare_drops": ["Worldbreaker"], "spawn_chance": 0.05, "is_boss": false},
+  {"name": "Chaos Knight", "tier": 8, "attack": 15, "defense": 23, "health": 209, "xp_value": 230, "min_copper": 1500, "max_copper": 2250, "common_drops": ["Potion of Superior Healing"], "rare_drops": ["Legendary Blade"], "spawn_chance": 0.05, "is_boss": false},
+
+  {"name": "Goblin Chieftain", "tier": 1, "attack": 6, "defense": 9, "health": 21, "xp_value": 100, "min_copper": 450, "max_copper": 900, "common_drops": ["Potion of Healing"], "rare_drops": ["Shortsword"], "spawn_chance": 0.0, "is_boss": true},
+
+  {"name": "Orc Warlord", "tier": 2, "attack": 10, "defense": 14, "health": 120, "xp_value": 175, "min_copper": 750, "max_copper": 1350, "common_drops": ["Potion of Greater Healing"], "rare_drops": ["Mace"], "spawn_chance": 0.0, "is_boss": true},
+
+  {"name": "Vampire Countess", "tier": 3, "attack": 14, "defense": 20, "health": 210, "xp_value": 275, "min_copper": 1200, "max_copper": 2100, "common_drops": ["Potion of Greater Healing"], "rare_drops": ["Tower Shield"], "spawn_chance": 0.0, "is_boss": true},
+
+  {"name": "Stone Golem King", "tier": 4, "attack": 16, "defense": 23, "health": 300, "xp_value": 400, "min_copper": 1800, "max_copper": 3000, "common_drops": ["Potion of Superior Healing"], "rare_drops": ["Half Plate"], "spawn_chance": 0.0, "is_boss": true},
+
+  {"name": "Lich King", "tier": 5, "attack": 18, "defense": 27, "health": 390, "xp_value": 550, "min_copper": 2700, "max_copper": 4500, "common_drops": ["Potion of Superior Healing"], "rare_drops": ["Warhammer"], "spawn_chance": 0.0, "is_boss": true},
+
+  {"name": "Ancient Dragon", "tier": 6, "attack": 20, "defense": 29, "health": 450, "xp_value": 725, "min_copper": 4200, "max_copper": 6750, "common_drops": ["Potion of Superior Healing"], "rare_drops": ["Runed Greatsword"], "spawn_chance": 0.0, "is_boss": true},
+
+  {"name": "Demon General", "tier": 7, "attack": 24, "defense": 32, "health": 510, "xp_value": 925, "min_copper": 6000, "max_copper": 9750, "common_drops": ["Potion of Superior Healing"], "rare_drops": ["Dragonscale Armour"], "spawn_chance": 0.0, "is_boss": true},
+
+  {"name": "The Fallen God", "tier": 8, "attack": 28, "defense": 36, "health": 570, "xp_value": 1150, "min_copper": 10500, "max_copper": 16500, "common_drops": ["Potion of Superior Healing"], "rare_drops": ["Legendary Blade"], "spawn_chance": 0.0, "is_boss": true}
+]

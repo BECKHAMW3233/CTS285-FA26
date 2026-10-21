@@ -1,0 +1,173 @@
+{
+  "offense": [
+    {
+      "id": "power_strike",
+      "name": "Power Strike",
+      "branch": "offense",
+      "tier": 1,
+      "requires": null,
+      "kind": "active",
+      "cost": 1,
+      "description": "Once per combat: your next attack auto-hits and deals +50% damage.",
+      "effect": {"type": "active_power_strike", "damage_multiplier": 1.5}
+    },
+    {
+      "id": "weapon_mastery",
+      "name": "Weapon Mastery",
+      "branch": "offense",
+      "tier": 2,
+      "requires": "power_strike",
+      "kind": "passive",
+      "cost": 1,
+      "description": "+2 Attack, always.",
+      "effect": {"type": "passive_attack", "amount": 2}
+    },
+    {
+      "id": "executioner",
+      "name": "Executioner",
+      "branch": "offense",
+      "tier": 3,
+      "requires": "weapon_mastery",
+      "kind": "passive",
+      "cost": 1,
+      "description": "Critical hits deal 2.5x damage instead of 2.0x.",
+      "effect": {"type": "crit_multiplier", "amount": 2.5}
+    },
+    {
+      "id": "vampiric_strikes",
+      "name": "Vampiric Strikes",
+      "branch": "offense",
+      "tier": 4,
+      "requires": "executioner",
+      "kind": "passive",
+      "cost": 1,
+      "description": "Heal for 15% of the damage you deal on every hit.",
+      "effect": {"type": "passive_lifesteal", "amount": 0.15}
+    },
+    {
+      "id": "deaths_precision",
+      "name": "Death's Precision",
+      "branch": "offense",
+      "tier": 5,
+      "requires": "vampiric_strikes",
+      "kind": "passive",
+      "cost": 1,
+      "description": "Critical hits deal 3.0x damage instead of 2.5x.",
+      "effect": {"type": "crit_multiplier", "amount": 3.0}
+    }
+  ],
+  "defense": [
+    {
+      "id": "second_wind",
+      "name": "Second Wind",
+      "branch": "defense",
+      "tier": 1,
+      "requires": null,
+      "kind": "active",
+      "cost": 1,
+      "description": "Once per combat: heal for 20% of your max health.",
+      "effect": {"type": "active_heal_percent", "amount": 0.2}
+    },
+    {
+      "id": "iron_skin",
+      "name": "Iron Skin",
+      "branch": "defense",
+      "tier": 2,
+      "requires": "second_wind",
+      "kind": "passive",
+      "cost": 1,
+      "description": "+2 Defense, always.",
+      "effect": {"type": "passive_defense", "amount": 2}
+    },
+    {
+      "id": "last_stand",
+      "name": "Last Stand",
+      "branch": "defense",
+      "tier": 3,
+      "requires": "iron_skin",
+      "kind": "passive",
+      "cost": 1,
+      "description": "Once per combat, a hit that would kill you instead leaves you at 1 HP.",
+      "effect": {"type": "survive_lethal"}
+    },
+    {
+      "id": "evasion",
+      "name": "Evasion",
+      "branch": "defense",
+      "tier": 4,
+      "requires": "last_stand",
+      "kind": "passive",
+      "cost": 1,
+      "description": "10% chance to dodge an incoming attack entirely, regardless of its roll.",
+      "effect": {"type": "passive_dodge_chance", "amount": 0.10}
+    },
+    {
+      "id": "phoenix_heart",
+      "name": "Phoenix Heart",
+      "branch": "defense",
+      "tier": 5,
+      "requires": "evasion",
+      "kind": "active",
+      "cost": 1,
+      "description": "Once per combat: heal for 35% of your max health (separate use from Second Wind).",
+      "effect": {"type": "active_heal_percent", "amount": 0.35}
+    }
+  ],
+  "utility": [
+    {
+      "id": "swift_feet",
+      "name": "Swift Feet",
+      "branch": "utility",
+      "tier": 1,
+      "requires": null,
+      "kind": "passive",
+      "cost": 1,
+      "description": "+3 to flee rolls (roughly +15% chance to escape combat).",
+      "effect": {"type": "flee_bonus", "amount": 3}
+    },
+    {
+      "id": "treasure_hunter",
+      "name": "Treasure Hunter",
+      "branch": "utility",
+      "tier": 2,
+      "requires": "swift_feet",
+      "kind": "passive",
+      "cost": 1,
+      "description": "+10% chance for a bonus loot drop after combat.",
+      "effect": {"type": "loot_bonus", "amount": 0.10}
+    },
+    {
+      "id": "battle_focus",
+      "name": "Battle Focus",
+      "branch": "utility",
+      "tier": 3,
+      "requires": "treasure_hunter",
+      "kind": "passive",
+      "cost": 1,
+      "description": "+10% XP earned from combat.",
+      "effect": {"type": "xp_bonus", "amount": 0.10}
+    },
+    {
+      "id": "venomous_strikes",
+      "name": "Venomous Strikes",
+      "branch": "utility",
+      "tier": 4,
+      "requires": "battle_focus",
+      "kind": "passive",
+      "cost": 1,
+      "description": "25% chance on hit to poison the target for 3 turns, dealing 20% of that hit's damage per turn.",
+      "effect": {"type": "passive_poison_chance", "amount": 0.25}
+    },
+    {
+      "id": "fortunes_favor",
+      "name": "Fortune's Favor",
+      "branch": "utility",
+      "tier": 5,
+      "requires": "venomous_strikes",
+      "kind": "passive",
+      "cost": 1,
+      "description": "+15% XP earned from combat (stacks with Battle Focus for +25% total).",
+      "effect": {"type": "xp_bonus", "amount": 0.15}
+    }
+  ]
+}

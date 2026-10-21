@@ -1,0 +1,17 @@
+# Dungeon RPG - dependencies
+#
+# Everything the game imports (tkinter, json, random, dataclasses, logging,
+# datetime, typing, os, csv) is in the Python standard library - there is
+# nothing to install with pip for the game logic itself.
+#
+# On most Windows/macOS Python installs, tkinter ships with Python already.
+# On Linux, if "import tkinter" fails, install it via your system package
+# manager instead of pip, e.g.:
+#   sudo apt install python3-tk        (Debian/Ubuntu)
+#   sudo dnf install python3-tkinter   (Fedora)
+#
+# Run with:
+#   pip install -r requirements.txt   (installs nothing right now, but keeps
+#                                       this file ready if a dependency is
+#                                       added later)
+#   python main.py

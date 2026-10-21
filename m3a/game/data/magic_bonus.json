@@ -1,0 +1,9 @@
+{
+  "order": ["+0", "+1", "+2", "+3"],
+  "tiers": {
+    "+0": {"label": "", "bonus": 0, "weight": 70, "price_multiplier": 1},
+    "+1": {"label": "+1 ", "bonus": 1, "weight": 20, "price_multiplier": 3},
+    "+2": {"label": "+2 ", "bonus": 2, "weight": 8, "price_multiplier": 8},
+    "+3": {"label": "+3 ", "bonus": 3, "weight": 2, "price_multiplier": 20}
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "fighter": {
+    "name": "Fighter",
+    "hit_die": 10,
+    "primary_ability": "strength",
+    "saving_throws": ["strength", "constitution"],
+    "is_caster": false,
+    "spellcasting_ability": null,
+    "starting_weapon": "Longsword",
+    "starting_armor": "Chain Mail",
+    "starting_shield": "Shield",
+    "ability_priority": ["strength", "constitution", "dexterity", "wisdom", "charisma", "intelligence"],
+    "features": {
+      "1": ["second_wind_class"],
+      "5": ["extra_attack"],
+      "11": ["extra_attack_2"],
+      "20": ["extra_attack_3"]
+    }
+  },
+  "rogue": {
+    "name": "Rogue",
+    "hit_die": 8,
+    "primary_ability": "dexterity",
+    "saving_throws": ["dexterity", "intelligence"],
+    "is_caster": false,
+    "spellcasting_ability": null,
+    "starting_weapon": "Rapier",
+    "starting_armor": "Studded Leather",
+    "starting_shield": null,
+    "ability_priority": ["dexterity", "constitution", "intelligence", "wisdom", "charisma", "strength"],
+    "features": {
+      "1": ["sneak_attack"],
+      "2": ["cunning_action"],
+      "5": ["uncanny_dodge"]
+    }
+  },
+  "wizard": {
+    "name": "Wizard",
+    "hit_die": 6,
+    "primary_ability": "intelligence",
+    "saving_throws": ["intelligence", "wisdom"],
+    "is_caster": true,
+    "spellcasting_ability": "intelligence",
+    "starting_weapon": "Quarterstaff",
+    "starting_armor": null,
+    "starting_shield": null,
+    "ability_priority": ["intelligence", "constitution", "dexterity", "wisdom", "charisma", "strength"],
+    "cantrips_known_at_1": ["Fire Bolt", "Ray of Frost"],
+    "spells_by_level": {
+      "1": ["Magic Missile"],
+      "2": ["Scorching Ray"],
+      "3": ["Fireball"],
+      "4": ["Ice Storm"],
+      "5": ["Cone of Cold"],
+      "6": ["Chain Lightning"],
+      "7": ["Prismatic Spray"],
+      "8": ["Sunburst"],
+      "9": ["Meteor Swarm"]
+    },
+    "features": {"1": ["spellcasting"]}
+  },
+  "cleric": {
+    "name": "Cleric",
+    "hit_die": 8,
+    "primary_ability": "wisdom",
+    "saving_throws": ["wisdom", "charisma"],
+    "is_caster": true,
+    "spellcasting_ability": "wisdom",
+    "starting_weapon": "Mace",
+    "starting_armor": "Chain Shirt",
+    "starting_shield": "Shield",
+    "ability_priority": ["wisdom", "constitution", "strength", "dexterity", "charisma", "intelligence"],
+    "cantrips_known_at_1": ["Sacred Flame", "Toll the Dead"],
+    "spells_by_level": {
+      "1": ["Cure Wounds"],
+      "2": ["Prayer of Healing"],
+      "3": ["Spirit Guardians"],
+      "4": ["Guardian of Faith"],
+      "5": ["Flame Strike"],
+      "6": ["Heal"],
+      "7": ["Fire Storm"],
+      "8": ["Divine Wrath"],
+      "9": ["Mass Heal"]
+    },
+    "features": {"1": ["spellcasting"]}
+  }
+}
