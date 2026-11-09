@@ -79,3 +79,16 @@ def default_problems() -> List[Problem]:
         Problem(2, "9 x 6", 54),
         Problem(3, "12 - 5", 7),
     ]
+
+
+# ---- M5: the store the Flask app uses ---------------------------------------
+# One InMemoryStore per server process. This is a deliberate stage-appropriate
+# boundary, not persistence: it is shared by every browser (there is only the
+# placeholder learner) and it is emptied whenever the process restarts,
+# including the --debug reloader restarting after a code edit. Persistence and
+# learner identity belong to PB-04a/b, which are Not Ready.
+_STORE = InMemoryStore()
+
+
+def get_store() -> InMemoryStore:
+    return _STORE

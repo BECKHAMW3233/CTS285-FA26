@@ -16,9 +16,9 @@ Design Studio's test case. Use max_tries=3 to model the original three-attempt f
 """
 
 from dataclasses import dataclass
-from typing import Optional
+from typing import List, Optional
 
-from data_store import Attempt, InMemoryStore
+from data_store import Attempt, InMemoryStore, Problem
 
 
 @dataclass(frozen=True)
@@ -29,6 +29,17 @@ class CheckResult:
     can_retry: bool
     revealed_answer: Optional[int]  # set only after the last allowed miss
     attempt: Attempt
+
+    @property
+    def message(self) -> str:
+        """M5: the feedback text moved here from prototype/main.py so any
+        interface (text or Flask template) shows the same outcome."""
+        label = f"Try {self.try_number} of {self.max_tries}"
+        if self.correct:
+            return f"[{label}] Correct!"
+        if self.can_retry:
+            return f"[{label}] EEE - Not quite. Try again."
+        return f"[{label}] EEE - The answer is {self.revealed_answer}."
 
 
 class AnswerChecker:
@@ -99,3 +110,65 @@ class AnswerChecker:
 
     def correct_count(self, learner_id: str) -> int:
         return sum(1 for a in self.history(learner_id) if a.correct)
+
+    # ---- M5 additions ----------------------------------------------------
+    # In prototype/main.py the `for problem in store.list_problems()` loop
+    # decided which problem comes next, so that rule lived in the interface.
+    # A Flask request has no loop to remember where the learner is, so the
+    # rule moves here and is derived from stored attempts, the same way
+    # current_try_number() already is.
+
+    def problem_finished(self, learner_id: str, problem_id: int) -> bool:
+        """A problem is done after a correct answer or after the reveal."""
+        return any(
+            a.correct or a.try_number >= self._max_tries
+            for a in self._store.attempts_for_problem(learner_id, problem_id)
+        )
+
+    def current_problem(self, learner_id: str) -> Optional[Problem]:
+        """The first problem, in store order, that is not finished yet."""
+        for problem in self._store.list_problems():
+            if not self.problem_finished(learner_id, problem.problem_id):
+                return problem
+        return None
+
+    def history_rows(self, learner_id: str) -> List[dict]:
+        """History entries with the problem prompt attached, for display."""
+        return [
+            {
+                "attempt_id": a.attempt_id,
+                "prompt": self._store.get_problem(a.problem_id).prompt,
+                "submitted_answer": a.submitted_answer,
+                "correct": a.correct,
+                "try_number": a.try_number,
+            }
+            for a in self.history(learner_id)
+        ]
+
+
+def practice_view(checker: AnswerChecker, learner_id: str, message: Optional[str] = None) -> dict:
+    """Everything an interface needs to draw the practice screen."""
+    problem = checker.current_problem(learner_id)
+    return {
+        "message": message,
+        "problem_prompt": problem.prompt if problem else None,
+        "history": checker.history_rows(learner_id),
+        "entries": len(checker.history(learner_id)),
+        "correct_count": checker.correct_count(learner_id),
+    }
+
+
+def check_answer(checker: AnswerChecker, learner_id: str, raw_answer: str) -> dict:
+    """Submit raw text for the learner's current problem and describe the result.
+
+    Invalid input is rejected and not recorded (the M4 decision). If every
+    problem is finished, nothing is recorded.
+    """
+    problem = checker.current_problem(learner_id)
+    if problem is None:
+        return practice_view(checker, learner_id)
+    try:
+        result = checker.submit_answer(learner_id, problem.problem_id, raw_answer)
+    except ValueError as error:
+        return practice_view(checker, learner_id, message=str(error))
+    return practice_view(checker, learner_id, message=result.message)

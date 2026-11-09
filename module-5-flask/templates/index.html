@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DataMan Practice</title>
+</head>
+<body>
+  <h1>DataMan Practice</h1>
+  <p><small>Records are kept in memory only.</small></p>
+
+  {% if view.message %}
+    <p id="message">{{ view.message }}</p>
+  {% endif %}
+
+  {% if view.problem_prompt %}
+    <form method="post" action="/">
+      <label for="answer">Problem: {{ view.problem_prompt }} = ?</label>
+      <input id="answer" name="answer" inputmode="numeric" autocomplete="off" autofocus>
+      <button type="submit">Check</button>
+    </form>
+  {% endif %}
+
+  <h2>Practice history (this session only)</h2>
+  {% if view.history %}
+    <ul id="history">
+      {% for a in view.history %}
+        <li>#{{ a.attempt_id }}: {{ a.prompt }} -> {{ a.submitted_answer }} ({{ "correct" if a.correct else "incorrect" }}, try {{ a.try_number }})</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No answers recorded.</p>
+  {% endif %}
+  <p id="totals">Entries: {{ view.entries }}   Correct: {{ view.correct_count }}</p>
+</body>
+</html>
