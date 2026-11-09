@@ -60,6 +60,8 @@ class AnswerChecker:
             text = raw.strip()
             if not text.isascii():  # only plain 0-9, no other numeral systems
                 raise ValueError
+            if "_" in text:  # M5 fix: int() accepts "5_6" as 56 (found in Flask test run)
+                raise ValueError
             return int(text)
         except (ValueError, AttributeError):
             raise ValueError("Please enter a whole number.")
