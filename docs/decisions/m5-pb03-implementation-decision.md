@@ -31,7 +31,7 @@ Before PB-03 this was a wrong history line. After PB-03 it is a lost retry and a
 ## Keep / revise / defer / next question
 
 - **Kept:** the score rule. It counts per problem, a try-2 correct counts (Memory Bank: "two tries to get it right"), and a pending retry is not counted as tried, so a try-1 miss never shows a point as lost. A logic test showed correct *attempts* can exceed problems right, so counting problems was the right unit.
-- **Revised:** the form sends the `problem_id` it showed, and `check_answer()` records nothing if that problem is finished (commit `422952b`; it was a failing test first in `d7c0d77`). It refuses rather than records against the old problem, so a finished problem is never reopened and the M4 round-marker question is avoided. M5 Scenario E now passes, and so do PB-02 #1 and PB-01 for that case.
+- **Revised:** the form sends the `problem_id` it showed, and `check_answer()` records nothing if that problem is finished (commit `12f714a`; it was a failing test first in `d1a59d1`). It refuses rather than records against the old problem, so a finished problem is never reopened and the M4 round-marker question is avoided. M5 Scenario E now passes, and so do PB-02 #1 and PB-01 for that case.
 - **Deferred:**
   - A request without `problem_id` keeps the old behavior so the existing contract and baseline tests hold. Only the browser form is protected.
   - Learner identity is still the placeholder: two different children on two devices still share one history and one score (PB-04a/b).

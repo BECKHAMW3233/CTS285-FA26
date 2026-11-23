@@ -11,21 +11,21 @@ python -m flask --app app run --debug --host=0.0.0.0           # live runs below
 
 | File | Kind of evidence | Tests | When it was committed |
 |---|---|---|---|
-| `tests/test_m4_criteria.py` | Change impact: M4 PB-01/PB-02 criteria at the logic layer | 7 | Before PB-03 (`6a22562`) |
-| `tests/test_flask_baseline.py` | Change impact: M5 Scenarios A, A2 and B through Flask | 3 | Before PB-03 (`6a22562`) |
-| `tests/test_pb03_score.py` | Feature: PB-03 #2–#4 and the score rule, at the logic layer | 11 | With the logic (`8e2c9d3`) |
-| `tests/test_flask_pb03.py` | Feature: PB-03 #1–#4 and the final score, through Flask | 4 | With the template (`cf672d6`) |
-| `tests/test_scenario_e_stale_page.py` | Change impact: retest of the known M5 defect | 4 | Failing first (`d7c0d77`), then fixed (`422952b`) |
+| `tests/test_m4_criteria.py` | Change impact: M4 PB-01/PB-02 criteria at the logic layer | 7 | Before PB-03 (`45b6bc0`) |
+| `tests/test_flask_baseline.py` | Change impact: M5 Scenarios A, A2 and B through Flask | 3 | Before PB-03 (`45b6bc0`) |
+| `tests/test_pb03_score.py` | Feature: PB-03 #2–#4 and the score rule, at the logic layer | 11 | With the logic (`a7cae07`) |
+| `tests/test_flask_pb03.py` | Feature: PB-03 #1–#4 and the final score, through Flask | 4 | With the template (`05188e7`) |
+| `tests/test_scenario_e_stale_page.py` | Change impact: retest of the known M5 defect | 4 | Failing first (`d1a59d1`), then fixed (`12f714a`) |
 
 | Commit | Result |
 |---|---|
-| `6a22562` (baseline, no PB-03 code) | 10 run, **OK** |
-| `8e2c9d3` (score logic) | 21 run, **OK**. All 10 baseline tests unchanged and passing. |
-| `cf672d6` (score on the page) | 25 run, **OK** |
-| `d7c0d77` (Scenario E test added) | 25 OK + **1 expected failure** (the defect) |
-| `422952b` (stale-page fix) | 29 run, **OK** |
+| `45b6bc0` (baseline, no PB-03 code) | 10 run, **OK** |
+| `a7cae07` (score logic) | 21 run, **OK**. All 10 baseline tests unchanged and passing. |
+| `05188e7` (score on the page) | 25 run, **OK** |
+| `d1a59d1` (Scenario E test added) | 25 OK + **1 expected failure** (the defect) |
+| `12f714a` (stale-page fix) | 29 run, **OK** |
 
-## Feature evidence: real browser (Playwright + Chromium, commit `422952b`)
+## Feature evidence: real browser (Playwright + Chromium, commit `12f714a`)
 
 The browser typed each answer and clicked **Check**.
 
@@ -60,7 +60,7 @@ Phone viewport: [`m5-pb03-score-phone.png`](m5-pb03-score-phone.png).
 
 The M5 finding left this defect open. I retested it because the score now reads the same records.
 
-**Before the fix (commit `cf672d6`), two tabs on one learner:**
+**Before the fix (commit `05188e7`), two tabs on one learner:**
 
 ```text
 tab1: Problem: 7 x 8 = ? | tab2: Problem: 7 x 8 = ?
@@ -80,7 +80,7 @@ The learner made one real miss on `9 x 6`, but the answer was revealed and the s
 | Back button, then resubmit | Not a trigger: Chromium re-requested the page, so it showed the real current problem | GET after each back |
 | Two tabs, same learner | **Trigger** (above) | — |
 
-**After the fix (commit `422952b`), same steps:**
+**After the fix (commit `12f714a`), same steps:**
 
 ```text
 tab1 saw "7 x 8", typed 56 -> [Try 1 of 2] Correct!                                      | Score: 1 right out of 1 tried
@@ -107,5 +107,5 @@ Live server log over these runs: 11 × `GET / 200`, 17 × `POST / 200`, no error
 | Correct attempts vs problems right | Can differ: logic test gives 2 correct attempts, 1 problem right | The score counts problems, kept |
 | **Change impact:** PB-02 #3 and M4 criteria | **PASS**, unchanged (10/10 baseline) | — |
 | **Change impact:** A2 re-POST after the end | Now shows the final score (was blank) | Minor gap closed |
-| **Change impact:** Scenario E stale tab | **FAIL** before the fix: a lost retry and a lower score. **PASS** after `422952b`. | State/data problem, revised |
+| **Change impact:** Scenario E stale tab | **FAIL** before the fix: a lost retry and a lower score. **PASS** after `12f714a`. | State/data problem, revised |
 | History and score after a server restart | Both emptied, as before | Expected: persistence is PB-04a/b |
