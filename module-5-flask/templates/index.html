@@ -9,8 +9,14 @@
   <h1>DataMan Practice</h1>
   <p><small>Records are kept in memory only.</small></p>
 
+  <p id="score"><strong>{{ view.score_text }}</strong></p>
+
   {% if view.message %}
     <p id="message">{{ view.message }}</p>
+  {% endif %}
+
+  {% if view.complete_text %}
+    <p id="complete">{{ view.complete_text }}</p>
   {% endif %}
 
   {% if view.problem_prompt %}
