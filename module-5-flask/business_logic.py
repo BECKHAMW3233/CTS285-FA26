@@ -188,6 +188,7 @@ def practice_view(checker: AnswerChecker, learner_id: str, message: Optional[str
     return {
         "message": message,
         "problem_prompt": problem.prompt if problem else None,
+        "problem_id": problem.problem_id if problem else None,  # sent back by the form
         "history": checker.history_rows(learner_id),
         "entries": len(checker.history(learner_id)),
         "correct_count": checker.correct_count(learner_id),
@@ -198,15 +199,28 @@ def practice_view(checker: AnswerChecker, learner_id: str, message: Optional[str
     }
 
 
-def check_answer(checker: AnswerChecker, learner_id: str, raw_answer: str) -> dict:
+STALE_PAGE_MESSAGE = "That problem is already finished. Here is your next problem."
+
+
+def check_answer(checker: AnswerChecker, learner_id: str, raw_answer: str,
+                 shown_problem_id: Optional[str] = None) -> dict:
     """Submit raw text for the learner's current problem and describe the result.
 
     Invalid input is rejected and not recorded (the M4 decision). If every
     problem is finished, nothing is recorded.
+
+    M5 extension (Scenario E): shown_problem_id is the problem the page showed.
+    If it is no longer the current problem, the page was stale (for example,
+    another tab already finished it). Nothing is recorded, so the answer is not
+    charged to a problem the learner never saw and the score is not lowered.
+    The finished problem is NOT reopened. Omitting shown_problem_id keeps the
+    pre-extension behavior.
     """
     problem = checker.current_problem(learner_id)
     if problem is None:
         return practice_view(checker, learner_id)
+    if shown_problem_id is not None and str(shown_problem_id).strip() != str(problem.problem_id):
+        return practice_view(checker, learner_id, message=STALE_PAGE_MESSAGE)
     try:
         result = checker.submit_answer(learner_id, problem.problem_id, raw_answer)
     except ValueError as error:
