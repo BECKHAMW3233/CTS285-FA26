@@ -134,6 +134,8 @@ This backlog turns the validated Module 2 requirements into product work a team 
 5. A first-time learner can find and understand the score without a printed manual (NFR-01) and without adult assistance (NFR-04).
 6. Criteria 1 to 4 pass across the browsers and devices in NFR-03.
 
+**Implementation status (M5 extension, 2026-11-23):** Built in `module-5-flask/`. Criteria 1 to 4 pass. Criterion 5 is untested (it needs a first-time learner), and criterion 6 is partial (Chromium at desktop and phone widths only). Score formula used: problems right / problems finished, taken from the Memory Bank evidence. See [`m5-pb03-implementation-decision.md`](decisions/m5-pb03-implementation-decision.md).
+
 ---
 
 ### PB-04a: My practice is saved if my session ends unexpectedly (NOT READY)
