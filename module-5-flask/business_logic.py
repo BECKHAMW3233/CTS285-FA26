@@ -9,6 +9,7 @@ Rules owned here:
 - Assign and track the try number (the state the interface must NOT keep).
 - Create one Attempt record per submission, correct or not (PB-02).
 - Decide when a retry is allowed and when the answer is revealed.
+- Compute the current score from tracked attempts (PB-03, M5 extension).
 
 The retry/reveal rule is a setting (max_tries), not a hard-coded requirement,
 because it is an open question in the requirements register. Two tries is the
@@ -40,6 +41,22 @@ class CheckResult:
         if self.can_retry:
             return f"[{label}] EEE - Not quite. Try again."
         return f"[{label}] EEE - The answer is {self.revealed_answer}."
+
+
+@dataclass(frozen=True)
+class Score:
+    """PB-03 / FR-03: the learner's current score, derived from tracked attempts.
+
+    Shape comes from the DataMan Memory Bank: "number of right answers" and
+    "number of problems you tried". No formula beyond that is assumed (PB-03
+    uncertainty note).
+    """
+    right: int  # distinct problems with a correct attempt (try 1 or try 2 both count)
+    tried: int  # distinct problems that are finished: correct, or answer revealed
+
+    @property
+    def text(self) -> str:
+        return f"{self.right} right out of {self.tried} tried"
 
 
 class AnswerChecker:
@@ -134,6 +151,22 @@ class AnswerChecker:
                 return problem
         return None
 
+    # ---- M5 extension: PB-03 "See my current score" ----------------------
+    # The score is computed from Attempt records every time it is asked for.
+    # It is never stored as its own number, so it cannot drift away from the
+    # history (M4: a stored summary "loses which problems were missed").
+
+    def score(self, learner_id: str) -> Score:
+        """Problems right / problems tried, counted per problem, not per attempt.
+
+        A problem with a retry still pending is not counted as tried yet, so a
+        try-1 miss never shows the learner a point they can still earn as lost.
+        """
+        problem_ids = {a.problem_id for a in self.history(learner_id)}
+        tried = {p for p in problem_ids if self.problem_finished(learner_id, p)}
+        right = {a.problem_id for a in self.history(learner_id) if a.correct}
+        return Score(right=len(right), tried=len(tried))
+
     def history_rows(self, learner_id: str) -> List[dict]:
         """History entries with the problem prompt attached, for display."""
         return [
@@ -151,24 +184,43 @@ class AnswerChecker:
 def practice_view(checker: AnswerChecker, learner_id: str, message: Optional[str] = None) -> dict:
     """Everything an interface needs to draw the practice screen."""
     problem = checker.current_problem(learner_id)
+    score = checker.score(learner_id)
     return {
         "message": message,
         "problem_prompt": problem.prompt if problem else None,
+        "problem_id": problem.problem_id if problem else None,  # sent back by the form
         "history": checker.history_rows(learner_id),
         "entries": len(checker.history(learner_id)),
         "correct_count": checker.correct_count(learner_id),
+        # PB-03: the score, and (Memory Bank) the final score once every problem is done
+        "score_text": f"Score: {score.text}",
+        "complete_text": (f"All problems finished! Final score: {score.text}."
+                          if problem is None else None),
     }
 
 
-def check_answer(checker: AnswerChecker, learner_id: str, raw_answer: str) -> dict:
+STALE_PAGE_MESSAGE = "That problem is already finished. Here is your next problem."
+
+
+def check_answer(checker: AnswerChecker, learner_id: str, raw_answer: str,
+                 shown_problem_id: Optional[str] = None) -> dict:
     """Submit raw text for the learner's current problem and describe the result.
 
     Invalid input is rejected and not recorded (the M4 decision). If every
     problem is finished, nothing is recorded.
+
+    M5 extension (Scenario E): shown_problem_id is the problem the page showed.
+    If it is no longer the current problem, the page was stale (for example,
+    another tab already finished it). Nothing is recorded, so the answer is not
+    charged to a problem the learner never saw and the score is not lowered.
+    The finished problem is NOT reopened. Omitting shown_problem_id keeps the
+    pre-extension behavior.
     """
     problem = checker.current_problem(learner_id)
     if problem is None:
         return practice_view(checker, learner_id)
+    if shown_problem_id is not None and str(shown_problem_id).strip() != str(problem.problem_id):
+        return practice_view(checker, learner_id, message=STALE_PAGE_MESSAGE)
     try:
         result = checker.submit_answer(learner_id, problem.problem_id, raw_answer)
     except ValueError as error:

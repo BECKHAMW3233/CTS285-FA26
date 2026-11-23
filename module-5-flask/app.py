@@ -29,5 +29,6 @@ def practice_page():
 @app.post("/")
 def submit_answer():
     view = check_answer(make_checker(), PLACEHOLDER_LEARNER_ID,
-                        request.form.get("answer", ""))
+                        request.form.get("answer", ""),
+                        shown_problem_id=request.form.get("problem_id"))
     return render_template("index.html", view=view)

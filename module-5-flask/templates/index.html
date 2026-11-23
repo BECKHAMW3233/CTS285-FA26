@@ -9,12 +9,19 @@
   <h1>DataMan Practice</h1>
   <p><small>Records are kept in memory only.</small></p>
 
+  <p id="score"><strong>{{ view.score_text }}</strong></p>
+
   {% if view.message %}
     <p id="message">{{ view.message }}</p>
   {% endif %}
 
+  {% if view.complete_text %}
+    <p id="complete">{{ view.complete_text }}</p>
+  {% endif %}
+
   {% if view.problem_prompt %}
     <form method="post" action="/">
+      <input type="hidden" name="problem_id" value="{{ view.problem_id }}">
       <label for="answer">Problem: {{ view.problem_prompt }} = ?</label>
       <input id="answer" name="answer" inputmode="numeric" autocomplete="off" autofocus>
       <button type="submit">Check</button>

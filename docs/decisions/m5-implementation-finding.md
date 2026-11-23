@@ -38,3 +38,7 @@ Also found and fixed: `parse_answer()` accepted `5_6` as 56, because `int()` all
 Decide the identity/session approach for PB-04a/b. Until then, test this question in Module 6: should the form send the `problem_id` that was displayed, so `submit_answer()` (which already accepts a `problem_id`) records the answer against the problem the learner actually saw?
 
 That raises the M4 open question about a round/session marker, because a stale submit would reopen a finished problem. Add a test for Scenario E in `module-5-flask/tests/`. It should fail until that decision is made.
+
+## Update (M5 extension, 2026-11-23): Scenario E revised
+
+PB-03 put a score on top of these same records. That raised the cost of Scenario E: a stale tab now costs the learner a retry and a point. Testing in Chromium narrowed the trigger. A double-click (1 POST) and the back button (the page is re-requested) did not reproduce it; a second tab on the same learner did. So the fix did not have to wait for identity. The form now sends the `problem_id` it showed, and `check_answer()` refuses, rather than records, an answer for a problem that is already finished. That keeps finished problems closed. The Scenario E test asked for above is `module-5-flask/tests/test_scenario_e_stale_page.py`: it failed first (`d1a59d1`) and passes after `12f714a`. The identity/session question for PB-04a/b is still open. See [`m5-pb03-implementation-decision.md`](m5-pb03-implementation-decision.md).
